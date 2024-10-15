@@ -10,7 +10,7 @@ import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Spinner from "../componenets/Spinner"
+import Spinner from "../components/Spinner"
 import shareIcon from '../assets/svg/shareIcon.svg'
 
 const Listing = () => {

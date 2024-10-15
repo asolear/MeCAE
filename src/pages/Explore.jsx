@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom"
+import { Routes, Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import terciario from '../assets/jpg/terciario.jpeg'
 import industrial from '../assets/jpg/industrial.jpeg'
 import transporte from '../assets/jpg/transporte.jpeg'
 import residencial from '../assets/jpg/residencial.jpeg'
-import Slider from "../componenets/Slider"
+import Slider from "../components/Slider"
 
 const Explore = () => {
     return (
         <div className="explore">
             <header>
-            <p className="pageHeader" style={{ textAlign: "center", margin: "20px 0" }}>Mercado de ahorros energéticos .</p>
+                <p className="pageHeader" style={{ textAlign: "center", margin: "20px 0" }}>Mercado de ahorros energéticos .</p>
             </header>
 
             <main>
@@ -38,6 +39,8 @@ const Explore = () => {
                     </Link>
                 </div>
             </main>
+
+
         </div>
     )
 }

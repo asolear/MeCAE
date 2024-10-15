@@ -41,8 +41,6 @@ function App() {
                     <Route path='/contact/:landlordId' element={<Contact />} />
                     <Route path='/*' element={<NotFound />} />
                 </Routes>
-                <CookieConsent />
-
                 <Footer />
                 <Navbar />
             </Router>

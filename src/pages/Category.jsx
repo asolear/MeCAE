@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom"
 import { collection, getDocs, query, where, orderBy, limit, startAfter } from "firebase/firestore"
 import { db } from "../firebase.config"
 import { toast } from "react-toastify"
-import Spinner from "../componenets/Spinner"
-import ListingItem from "../componenets/ListingItem"
+import Spinner from "../components/Spinner"
+import ListingItem from "../components/ListingItem"
 
 const Category = () => {
     const [listings, setListings] = useState(null)

@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import { collection, getDocs, query, where, orderBy, limit, startAfter } from "firebase/firestore"
 import { db } from "../firebase.config"
 import { toast } from "react-toastify"
-import Spinner from "../componenets/Spinner"
-import ListingItem from "../componenets/ListingItem"
+import Spinner from "../components/Spinner"
+import ListingItem from "../components/ListingItem"
 
 const Offers = () => {
     const [listings, setListings] = useState(null)

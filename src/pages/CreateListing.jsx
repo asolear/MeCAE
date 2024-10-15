@@ -5,7 +5,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { db } from '../firebase.config'
 import { v4 as uuidv4 } from 'uuid'
 import { useNavigate } from "react-router-dom"
-import Spinner from "../componenets/Spinner"
+import Spinner from "../components/Spinner"
 import { toast } from "react-toastify"
 
 
