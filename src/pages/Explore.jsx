@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
-import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg'
-import saleCategoryImage from '../assets/jpg/saleCategoryImage.jpg'
+import terciario from '../assets/jpg/terciario.jpeg'
+import industrial from '../assets/jpg/industrial.jpeg'
+import transporte from '../assets/jpg/transporte.jpeg'
+import residencial from '../assets/jpg/residencial.jpeg'
 import Slider from "../componenets/Slider"
 
 const Explore = () => {
@@ -8,22 +10,31 @@ const Explore = () => {
         <div className="explore">
             <header>
             <p className="pageHeader">Mercado de ahorros energéticos .</p>
-            <p className="pageHeader">Mercado de ahorros energéticos transformables en Certificado de Ahorro Energético (CAE).</p>
             </header>
 
             <main>
                 {/* <Slider /> */}
 
-                <p className="exploreCategoryHeading">Categories</p>
+                <p className="exploreCategoryHeading">Sectores</p>
                 <div className="exploreCategories">
                     <Link to='/category/rent'>
-                        <img src={rentCategoryImage} alt="rent" className="exploreCategoryImg" />
-                        <p className="exploreCategoryName">Places For Rent</p>
+                        <img src={terciario} alt="rent" className="exploreCategoryImg" />
+                        <p className="exploreCategoryName">Industrial</p>
                     </Link>
 
                     <Link to='/category/sale'>
-                        <img src={saleCategoryImage} alt="sale" className="exploreCategoryImg" />
-                        <p className="exploreCategoryName">Places For Sale</p>
+                        <img src={industrial} alt="sale" className="exploreCategoryImg" />
+                        <p className="exploreCategoryName">industrial</p>
+                    </Link>
+
+                    <Link to='/category/sale'>
+                        <img src={transporte} alt="sale" className="exploreCategoryImg" />
+                        <p className="exploreCategoryName">transporte</p>
+                    </Link>
+
+                    <Link to='/category/sale'>
+                        <img src={residencial} alt="sale" className="exploreCategoryImg" />
+                        <p className="exploreCategoryName">residencial</p>
                     </Link>
                 </div>
             </main>

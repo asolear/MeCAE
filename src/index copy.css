@@ -463,22 +463,23 @@ button {
     }
 }
 
-
 .exploreCategories {
     display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea */
-    justify-content: space-between; /* Espacia las imágenes */
-    gap: 16px; /* Espacio entre las imágenes */
+    justify-content: space-between;
+}
+
+.exploreCategories a {
+    width: 48%;
 }
 
 .exploreCategoryImg {
-    width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 150px; /* Ajusta el ancho máximo según lo necesites */
-    border-radius: 8px; /* Bordes redondeados (opcional) */
+    min-height: 115px;
+    height: 15vw;
+    width: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    margin: 0 auto;
 }
-
-
 
 .exploreCategoryName {
     font-weight: 500;
