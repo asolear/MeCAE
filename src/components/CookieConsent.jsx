@@ -90,7 +90,7 @@ const CookieConsent = ({ children }) => {
 // Estilos
 const bannerStyle = {
   position: 'fixed',
-  top: '0',
+  bottom: '0',
   left: '0',
   right: '0',
   height: '50%', // Ocupa la mitad superior de la pantalla
