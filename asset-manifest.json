@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MeCAE/static/css/main.039d9c05.css",
-    "main.js": "/MeCAE/static/js/main.32766db4.js",
+    "main.js": "/MeCAE/static/js/main.b35521c3.js",
     "static/media/saleCategoryImage.jpg": "/MeCAE/static/media/saleCategoryImage.c4d28ee7217d692d13fb.jpg",
     "static/media/rentCategoryImage.jpg": "/MeCAE/static/media/rentCategoryImage.cd9f015021c041d9ad87.jpg",
     "static/media/googleIcon.svg": "/MeCAE/static/media/googleIcon.a2a9c863d781c3e8abab4e7390cde6cb.svg",
@@ -22,10 +22,10 @@
     "static/media/keyboardArrowRightIcon.svg": "/MeCAE/static/media/keyboardArrowRightIcon.8cee54bec29003f4c3faa8f2acfa6de8.svg",
     "static/media/homeIcon.svg": "/MeCAE/static/media/homeIcon.09f28a7193ed1624e778ad88fc51ab56.svg",
     "main.039d9c05.css.map": "/MeCAE/static/css/main.039d9c05.css.map",
-    "main.32766db4.js.map": "/MeCAE/static/js/main.32766db4.js.map"
+    "main.b35521c3.js.map": "/MeCAE/static/js/main.b35521c3.js.map"
   },
   "entrypoints": [
     "static/css/main.039d9c05.css",
-    "static/js/main.32766db4.js"
+    "static/js/main.b35521c3.js"
   ]
 }
