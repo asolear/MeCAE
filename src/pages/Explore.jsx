@@ -9,7 +9,7 @@ const Explore = () => {
     return (
         <div className="explore">
             <header>
-            <p className="pageHeader">Mercado de ahorros energéticos .</p>
+            <p className="pageHeader" style={{ textAlign: "center", margin: "20px 0" }}>Mercado de ahorros energéticos .</p>
             </header>
 
             <main>

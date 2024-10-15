@@ -18,6 +18,12 @@ const Navbar = () => {
         style={{ cursor: "pointer" }}
         onClick={() => navigate("/")}
       >
+      <img
+        src="/logo.png" // Cambia 'logo.png' al nombre de tu archivo
+        alt="Logo"
+        style={{ height: '40px', marginRight: '8px' }} // Aumenta la altura según sea necesario
+      />
+
         MeCAE
       </nav>
       <nav className="navbarNav">
