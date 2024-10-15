@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/MeCAE/static/css/main.039d9c05.css",
-    "main.js": "/MeCAE/static/js/main.b35521c3.js",
-    "static/media/saleCategoryImage.jpg": "/MeCAE/static/media/saleCategoryImage.c4d28ee7217d692d13fb.jpg",
-    "static/media/rentCategoryImage.jpg": "/MeCAE/static/media/rentCategoryImage.cd9f015021c041d9ad87.jpg",
+    "main.css": "/MeCAE/static/css/main.e90028c7.css",
+    "main.js": "/MeCAE/static/js/main.4088b21e.js",
+    "static/media/industrial.jpeg": "/MeCAE/static/media/industrial.9b61b835b0119fc01117.jpeg",
+    "static/media/residencial.jpeg": "/MeCAE/static/media/residencial.33129067409829b4846b.jpeg",
+    "static/media/transporte.jpeg": "/MeCAE/static/media/transporte.b02218adf49bb58eb4bd.jpeg",
+    "static/media/terciario.jpeg": "/MeCAE/static/media/terciario.30fe3d5c2dbdd431730b.jpeg",
     "static/media/googleIcon.svg": "/MeCAE/static/media/googleIcon.a2a9c863d781c3e8abab4e7390cde6cb.svg",
     "index.html": "/MeCAE/index.html",
     "static/media/visibilityOffIcon.svg": "/MeCAE/static/media/visibilityOffIcon.f903a6dd5f094c487485f0f5221a8682.svg",
@@ -21,11 +23,11 @@
     "static/media/deleteIcon.svg": "/MeCAE/static/media/deleteIcon.a53e22036f5f02bda3f291072d6c5f80.svg",
     "static/media/keyboardArrowRightIcon.svg": "/MeCAE/static/media/keyboardArrowRightIcon.8cee54bec29003f4c3faa8f2acfa6de8.svg",
     "static/media/homeIcon.svg": "/MeCAE/static/media/homeIcon.09f28a7193ed1624e778ad88fc51ab56.svg",
-    "main.039d9c05.css.map": "/MeCAE/static/css/main.039d9c05.css.map",
-    "main.b35521c3.js.map": "/MeCAE/static/js/main.b35521c3.js.map"
+    "main.e90028c7.css.map": "/MeCAE/static/css/main.e90028c7.css.map",
+    "main.4088b21e.js.map": "/MeCAE/static/js/main.4088b21e.js.map"
   },
   "entrypoints": [
-    "static/css/main.039d9c05.css",
-    "static/js/main.b35521c3.js"
+    "static/css/main.e90028c7.css",
+    "static/js/main.4088b21e.js"
   ]
 }
