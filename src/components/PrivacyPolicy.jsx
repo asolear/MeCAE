@@ -71,8 +71,8 @@ const PrivacyPolicy = () => {
         Si tiene alguna pregunta o inquietud sobre esta política de privacidad o nuestras prácticas de manejo de datos, contáctenos en:
       </p>
       <ul>
-        <li><strong>Correo electrónico</strong>: [tu-email@dominio.com]</li>
-        <li><strong>Dirección</strong>: [Tu dirección]</li>
+        <li><strong>Correo electrónico</strong>: info@ibercae.com</li>
+        <li><strong>Dirección</strong>: C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga</li>
       </ul>
     </div>
   );

@@ -37,7 +37,7 @@ const AboutUs = () => {
 
       <section>
         <h2>Contáctanos</h2>
-        <p>Si tienes alguna pregunta, no dudes en contactarnos en info@tuempresa.com o visítanos en [tu dirección].</p>
+        <p>Si tienes alguna pregunta, no dudes en contactarnos en info@tuempresa.com o visítanos en C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga.</p>
       </section> */}
     </div>
     </div>

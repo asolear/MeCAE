@@ -13,7 +13,7 @@ const TermsOfUse = () => {
 
       <h2>2. Modificaciones a los Términos</h2>
       <p>
-        [Su Empresa] se reserva el derecho de modificar estos Términos de Uso en cualquier momento. Los cambios entrarán en vigor una vez que se publiquen en este sitio. Es su responsabilidad revisar periódicamente los términos para estar al tanto de cualquier modificación.
+        MeCAE se reserva el derecho de modificar estos Términos de Uso en cualquier momento. Los cambios entrarán en vigor una vez que se publiquen en este sitio. Es su responsabilidad revisar periódicamente los términos para estar al tanto de cualquier modificación.
       </p>
 
       <h2>3. Uso Permitido</h2>
@@ -31,27 +31,27 @@ const TermsOfUse = () => {
 
       <h2>5. Propiedad Intelectual</h2>
       <p>
-        Todos los contenidos de este sitio, incluidos textos, gráficos, logotipos, imágenes y software, son propiedad de [Su Empresa] o de sus licenciantes y están protegidos por las leyes de derechos de autor y propiedad intelectual. No se permite la reproducción, distribución o modificación de ningún contenido sin el consentimiento previo por escrito de [Su Empresa].
+        Todos los contenidos de este sitio, incluidos textos, gráficos, logotipos, imágenes y software, son propiedad de MeCAE o de sus licenciantes y están protegidos por las leyes de derechos de autor y propiedad intelectual. No se permite la reproducción, distribución o modificación de ningún contenido sin el consentimiento previo por escrito de MeCAE.
       </p>
 
       <h2>6. Limitación de Responsabilidad</h2>
       <p>
-        En la máxima medida permitida por la ley, [Su Empresa] no será responsable de ningún daño directo, indirecto, incidental, especial, punitivo o consecuente que surja de su acceso o uso del sitio, incluyendo, pero no limitado a, la pérdida de beneficios o ingresos, o la interrupción del negocio.
+        En la máxima medida permitida por la ley, MeCAE no será responsable de ningún daño directo, indirecto, incidental, especial, punitivo o consecuente que surja de su acceso o uso del sitio, incluyendo, pero no limitado a, la pérdida de beneficios o ingresos, o la interrupción del negocio.
       </p>
 
       <h2>7. Enlaces a Sitios de Terceros</h2>
       <p>
-        Este sitio puede contener enlaces a otros sitios web que no son propiedad ni están controlados por [Su Empresa]. No somos responsables del contenido de dichos sitios y no asumimos ninguna responsabilidad por las prácticas de privacidad de los mismos. Le recomendamos que revise los términos y políticas de privacidad de cualquier sitio web de terceros que visite.
+        Este sitio puede contener enlaces a otros sitios web que no son propiedad ni están controlados por MeCAE. No somos responsables del contenido de dichos sitios y no asumimos ninguna responsabilidad por las prácticas de privacidad de los mismos. Le recomendamos que revise los términos y políticas de privacidad de cualquier sitio web de terceros que visite.
       </p>
 
       <h2>8. Sanciones por Incumplimiento</h2>
       <p>
-        En caso de que se descubra que ha proporcionado información falsa, inexacta o engañosa, [Su Empresa] se reserva el derecho de suspender o eliminar su cuenta sin previo aviso. Dependiendo de la gravedad del caso, [Su Empresa] se reserva el derecho de tomar medidas legales adicionales para proteger sus derechos y los de otros usuarios.
+        En caso de que se descubra que ha proporcionado información falsa, inexacta o engañosa, MeCAE se reserva el derecho de suspender o eliminar su cuenta sin previo aviso. Dependiendo de la gravedad del caso, MeCAE se reserva el derecho de tomar medidas legales adicionales para proteger sus derechos y los de otros usuarios.
       </p>
 
       <h2>9. Ley Aplicable</h2>
       <p>
-        Estos Términos de Uso se rigen por las leyes de [Su País]. Cualquier disputa relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales de [Su Ciudad].
+        Estos Términos de Uso se rigen por las leyes de España. Cualquier disputa relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales de Málaga.
       </p>
 
       <h2>10. Contacto</h2>
@@ -59,8 +59,8 @@ const TermsOfUse = () => {
         Si tiene preguntas sobre estos Términos de Uso, contáctenos en:
       </p>
       <ul>
-        <li><strong>Correo electrónico</strong>: [tu-email@dominio.com]</li>
-        <li><strong>Dirección</strong>: [Tu dirección]</li>
+        <li><strong>Correo electrónico</strong>: info@ibercae.com</li>
+        <li><strong>Dirección</strong>: C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga</li>
       </ul>
     </div>
   );
