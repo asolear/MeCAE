@@ -23,7 +23,15 @@ const Navbar = () => {
           alt="Logo"
           style={{ height: '40px', marginRight: '8px' }} // Aumenta la altura según sea necesario
         /> */}
-        <span style={{ color: "#ffffff", }}>MeCAE</span>
+        {/* <span style={{ color: "#ffffff", }}>MeCAE</span> */}
+        <span style={{ 
+  color: "#ffffff", 
+  fontSize: "72px",  // Ajusta el tamaño de la fuente
+  transform: "scale(.2, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
+  display: "inline-block",  // Necesario para que el span respete el transform
+}}>
+  MeCAE
+</span>
       </nav>
       <nav className="navbarNav">
         <ul className="navbarListItems">
