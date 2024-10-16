@@ -18,12 +18,20 @@ const Footer = () => {
   };
 
   return (
-    <div className="footer" style={footerStyle}>
+    <div className="footer">
+
+
+
+
+
+
+
+
+      
       <p>Copyright &copy; {footerYear} MeCAE. All rights reserved.</p>
-      <div style={linkContainerStyle}>
-        <button onClick={toggleTermsOfUse} style={linkStyle}>Términos de Uso</button>
-        <button onClick={togglePrivacyPolicy} style={linkStyle}>Política de Privacidad</button>
-      </div>
+        
+        <button onClick={toggleTermsOfUse} className='navbarListItem'>Términos de Uso</button>
+        <button onClick={togglePrivacyPolicy} className='navbarListItem'>Política de Privacidad</button>
 
       {/* Modal para los Términos de Uso */}
       {showTermsOfUse && (
@@ -32,7 +40,7 @@ const Footer = () => {
           <div style={scrollableContainerStyle}>
             <TermsOfUse />
           </div>
-          <button onClick={toggleTermsOfUse} style={closeButtonStyle}>Cerrar</button>
+          <button onClick={toggleTermsOfUse}>Cerrar</button>
         </div>
       )}
 
@@ -43,37 +51,14 @@ const Footer = () => {
           <div style={scrollableContainerStyle}>
             <PrivacyPolicy />
           </div>
-          <button onClick={togglePrivacyPolicy} style={closeButtonStyle}>Cerrar</button>
+          <button onClick={togglePrivacyPolicy}>Cerrar</button>
         </div>
       )}
     </div>
   );
 };
 
-// Estilos opcionales
-const footerStyle = {
-  backgroundColor: '#fff',
-  color: '#fff',
-  textAlign: 'center',
-  padding: '10px 0',
-  position: 'fixed',
-  bottom: 0,
-  width: '100%',
-};
 
-const linkContainerStyle = {
-  marginTop: '10px',
-};
-
-const linkStyle = {
-  color: '#4CAF50',
-  background: 'none',
-  border: 'none',
-  cursor: 'pointer',
-  marginLeft: '10px',
-  textDecoration: 'underline',
-  fontSize: 'inherit',
-};
 
 const modalStyle = {
   position: 'fixed',
@@ -96,13 +81,5 @@ const scrollableContainerStyle = {
   marginBottom: '10px',
 };
 
-const closeButtonStyle = {
-  marginTop: '10px',
-  backgroundColor: '#f44336',
-  color: 'white',
-  padding: '10px 20px',
-  border: 'none',
-  cursor: 'pointer',
-};
 
 export default Footer;
