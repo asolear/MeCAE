@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import PrivacyPolicy from './PrivacyPolicy';  // Asegúrate de que la ruta sea correcta
 import TermsOfUse from './TermsOfUse';        // Asegúrate de que la ruta sea correcta
+import AboutUs from './AboutUs';        // Asegúrate de que la ruta sea correcta
 
 const Footer = () => {
   const footerYear = new Date().getFullYear();
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [showTermsOfUse, setShowTermsOfUse] = useState(false);
+  const [showAboutUs, setShowAboutUs] = useState(false);
 
   const togglePrivacyPolicy = () => {
     setShowPrivacyPolicy(!showPrivacyPolicy);
@@ -17,21 +19,19 @@ const Footer = () => {
     setShowPrivacyPolicy(false);  // Cierra otros modales si están abiertos
   };
 
+  const toggleAboutUs = () => {
+    setShowAboutUs(!showAboutUs);
+    setShowPrivacyPolicy(false);  // Cierra otros modales si están abiertos
+  };
+
   return (
     <div className="footer">
 
+      <p>Copyright &copy; {footerYear} </p>
 
-
-
-
-
-
-
-      
-      <p>Copyright &copy; {footerYear} MeCAE. All rights reserved.</p>
-        
-        <button onClick={toggleTermsOfUse} className='navbarListItem'>Términos de Uso</button>
-        <button onClick={togglePrivacyPolicy} className='navbarListItem'>Política de Privacidad</button>
+      <button onClick={toggleTermsOfUse} className='navbarListItem'>MeCAE.</button>
+      <button onClick={toggleTermsOfUse} className='navbarListItem'>Términos de Uso</button>
+      <button onClick={togglePrivacyPolicy} className='navbarListItem'>Política de Privacidad</button>
 
       {/* Modal para los Términos de Uso */}
       {showTermsOfUse && (
@@ -54,6 +54,16 @@ const Footer = () => {
           <button onClick={togglePrivacyPolicy}>Cerrar</button>
         </div>
       )}
+      {/* Modal para la AboutUs */}
+      {showAboutUs && (
+        <div style={modalStyle}>
+          <h2>Política de Privacidad</h2>
+          <div style={scrollableContainerStyle}>
+            <PrivacyPolicy />
+          </div>
+          <button onClick={toggleAboutUs}>Cerrar</button>
+        </div>
+      )}
     </div>
   );
 };
@@ -66,7 +76,7 @@ const modalStyle = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#fff',
-  padding: '20px',  color: '#000', // Color oscuro para el texto
+  padding: '20px', color: '#000', // Color oscuro para el texto
 
   boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
   zIndex: 1001,
