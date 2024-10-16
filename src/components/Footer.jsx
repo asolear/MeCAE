@@ -12,56 +12,56 @@ const Footer = () => {
   const togglePrivacyPolicy = () => {
     setShowPrivacyPolicy(!showPrivacyPolicy);
     setShowTermsOfUse(false);  // Cierra otros modales si están abiertos
+    setShowAboutUs(false);
   };
 
   const toggleTermsOfUse = () => {
     setShowTermsOfUse(!showTermsOfUse);
     setShowPrivacyPolicy(false);  // Cierra otros modales si están abiertos
+    setShowAboutUs(false);
   };
 
   const toggleAboutUs = () => {
     setShowAboutUs(!showAboutUs);
     setShowPrivacyPolicy(false);  // Cierra otros modales si están abiertos
+    setShowTermsOfUse(false);
   };
 
   return (
     <div className="footer">
 
-      <p>Copyright &copy; {footerYear} </p>
 
-      <button onClick={toggleTermsOfUse} className='navbarListItem'>MeCAE.</button>
+      <button onClick={toggleAboutUs} className='navbarListItem'>MeCAE&copy; {footerYear}</button>
       <button onClick={toggleTermsOfUse} className='navbarListItem'>Términos de Uso</button>
       <button onClick={togglePrivacyPolicy} className='navbarListItem'>Política de Privacidad</button>
 
-      {/* Modal para los Términos de Uso */}
       {showTermsOfUse && (
         <div style={modalStyle}>
-          <h2>Términos de Uso</h2>
           <div style={scrollableContainerStyle}>
             <TermsOfUse />
           </div>
-          <button onClick={toggleTermsOfUse}>Cerrar</button>
+          <button  className='formButtonActive' onClick={toggleTermsOfUse}>Cerrar</button>
+
         </div>
       )}
 
       {/* Modal para la Política de Privacidad */}
       {showPrivacyPolicy && (
         <div style={modalStyle}>
-          <h2>Política de Privacidad</h2>
           <div style={scrollableContainerStyle}>
             <PrivacyPolicy />
           </div>
-          <button onClick={togglePrivacyPolicy}>Cerrar</button>
+          <button  className='formButtonActive' onClick={togglePrivacyPolicy}>Cerrar</button>
         </div>
       )}
+      
       {/* Modal para la AboutUs */}
       {showAboutUs && (
         <div style={modalStyle}>
-          <h2>Política de Privacidad</h2>
           <div style={scrollableContainerStyle}>
-            <PrivacyPolicy />
+            <AboutUs />
           </div>
-          <button onClick={toggleAboutUs}>Cerrar</button>
+          <button onClick={toggleAboutUs} className='formButtonActive'>Cerrar</button>
         </div>
       )}
     </div>

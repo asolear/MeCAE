@@ -3,77 +3,43 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <div style={containerStyle}>
-      <h1>Política de Privacidad</h1>
-      <p><strong>Última actualización: [Fecha]</strong></p>
+      <div>
+      <section>
+        <h1>Sobre Nosotros</h1>
+        <p>Somos una empresa dedicada a ofrecer los mejores servicios en el Sistema de Certificados de Ahorro Energético (CAE). 
+          Nuestra misión es participar en el mercado primario facilitando el contacto entre 'Propietarios del ahorro' y 'Sujetos obligados y delegados'.</p>
+      </section>
+      <section>
+        <h2>Contáctanos</h2>
+        <p><strong>Dirección:</strong> C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga</p>
+        <p><strong>Teléfono:</strong> +34 951 73 34 91</p>
+        <p><strong>Email:</strong> info@ibercae.com</p>
+      </section>
 
-      <h2>1. Información que Recopilamos</h2>
-      <p>
-        Recopilamos información que usted nos proporciona directamente, así como información sobre su uso de nuestros servicios:
-      </p>
-      <ul>
-        <li>
-          <strong>Información Personal</strong>: Al registrarse, es posible que le solicitemos información personal, como su nombre, dirección de correo electrónico y otra información relevante.
-        </li>
-        <li>
-          <strong>Información de Uso</strong>: Recopilamos información sobre cómo interactúa con nuestros servicios, incluyendo la fecha y hora de su visita, la duración de la visita y las páginas que visita.
-        </li>
-      </ul>
+      {/* <section>
+        <h2>Nuestra Historia</h2>
+        <p>Fundada en [año], hemos crecido hasta convertirnos en líderes en [enfoque o mercado específico], ofreciendo soluciones innovadoras a nuestros clientes.</p>
+      </section>
 
-      <h2>2. Uso de la Información</h2>
-      <p>
-        Utilizamos la información que recopilamos para:
-      </p>
-      <ul>
-        <li>Proporcionar y mantener nuestros servicios.</li>
-        <li>Mejorar y personalizar su experiencia.</li>
-        <li>Comunicarnos con usted, incluyendo el envío de correos electrónicos sobre actualizaciones, ofertas y promociones.</li>
-        <li>Cumplir con nuestras obligaciones legales y resolver disputas.</li>
-      </ul>
+      <section>
+        <h2>Conoce al Equipo</h2>
+        <ul>
+          <li>John Doe - CEO</li>
+          <li>Jane Smith - CTO</li>
+          <li>Emily Davis - COO</li>
+        </ul>
+      </section>
 
-      <h2>3. Almacenamiento de Datos</h2>
-      <p>
-        Almacenamos su información personal durante el tiempo que sea necesario para cumplir con los fines establecidos en esta política, y de acuerdo con nuestras obligaciones legales.
-      </p>
+      <section>
+        <h2>Nuestros Valores</h2>
+        <p>Creamos en la transparencia, la innovación y en poner a nuestros clientes en primer lugar en todo lo que hacemos.</p>
+      </section>
 
-      <h2>4. Compartir Información</h2>
-      <p>
-        No compartimos su información personal con terceros, excepto en las siguientes circunstancias:
-      </p>
-      <ul>
-        <li>Con su consentimiento explícito.</li>
-        <li>Con proveedores de servicios que nos ayudan a operar nuestro negocio y proporcionarle nuestros servicios (por ejemplo, servicios de correo electrónico).</li>
-        <li>Para cumplir con la ley, responder a citaciones o solicitudes legales, o proteger nuestros derechos o los de otros.</li>
-      </ul>
-
-      <h2>5. Sus Derechos</h2>
-      <p>
-        Usted tiene los siguientes derechos respecto a su información personal:
-      </p>
-      <ul>
-        <li><strong>Acceso</strong>: Puede solicitar una copia de la información que tenemos sobre usted.</li>
-        <li><strong>Rectificación</strong>: Puede solicitar la corrección de información inexacta o incompleta.</li>
-        <li><strong>Eliminación</strong>: Puede solicitar la eliminación de su información personal bajo ciertas condiciones.</li>
-        <li><strong>Oposición</strong>: Puede oponerse al tratamiento de su información personal en determinadas circunstancias.</li>
-      </ul>
-
-      <h2>6. Seguridad de la Información</h2>
-      <p>
-        Tomamos medidas razonables para proteger su información personal contra pérdida, robo y uso indebido. Sin embargo, ningún método de transmisión a través de Internet o método de almacenamiento electrónico es 100% seguro. Por lo tanto, no podemos garantizar su seguridad absoluta.
-      </p>
-
-      <h2>7. Cambios a Esta Política de Privacidad</h2>
-      <p>
-        Podemos actualizar esta política de privacidad de vez en cuando. Le notificaremos sobre cambios significativos en la forma en que tratamos la información personal enviándole un aviso a la dirección de correo electrónico que nos proporcionó.
-      </p>
-
-      <h2>8. Contacto</h2>
-      <p>
-        Si tiene alguna pregunta o inquietud sobre esta política de privacidad o nuestras prácticas de manejo de datos, contáctenos en:
-      </p>
-      <ul>
-        <li><strong>Correo electrónico</strong>: [tu-email@dominio.com]</li>
-        <li><strong>Dirección</strong>: [Tu dirección]</li>
-      </ul>
+      <section>
+        <h2>Contáctanos</h2>
+        <p>Si tienes alguna pregunta, no dudes en contactarnos en info@tuempresa.com o visítanos en [tu dirección].</p>
+      </section> */}
+    </div>
     </div>
   );
 };
