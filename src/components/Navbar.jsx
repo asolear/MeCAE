@@ -18,19 +18,18 @@ const Navbar = () => {
         style={{ cursor: "pointer" }}
         onClick={() => navigate("/")}
       >
-      <img
-        src="/logo.png" // Cambia 'logo.png' al nombre de tu archivo
-        alt="Logo"
-        style={{ height: '40px', marginRight: '8px' }} // Aumenta la altura según sea necesario
-      />
-
-        MeCAE
+        {/* <img
+          src="/logo.png" // Cambia 'logo.png' al nombre de tu archivo
+          alt="Logo"
+          style={{ height: '40px', marginRight: '8px' }} // Aumenta la altura según sea necesario
+        /> */}
+        <span style={{ color: "#ffffff", }}>MeCAE</span>
       </nav>
       <nav className="navbarNav">
         <ul className="navbarListItems">
           <li className="navbarListItem" onClick={() => navigate("/")}>
             <ExploreIcon
-              fill={pathMatchRoute("/") ? "#2c2c2c" : "#8f8f8f"}
+              fill={pathMatchRoute("/") ? "#ffffff" : "#8f8f8f"}
               width="36px"
               height="36px"
             />
@@ -46,7 +45,7 @@ const Navbar = () => {
           </li>
           <li className="navbarListItem" onClick={() => navigate("/offers")}>
             <OfferIcon
-              fill={pathMatchRoute("/offers") ? "#2c2c2c" : "#8f8f8f"}
+              fill={pathMatchRoute("/offers") ? "#ffffff" : "#8f8f8f"}
               width="36px"
               height="36px"
             />
@@ -60,18 +59,19 @@ const Navbar = () => {
               Ofertas
             </p>
           </li>
+
+
+
           <li
-            className="navbarListItem"
-            onClick={() => navigate("/user/profile")}
-          >
+            className="navbarListItem" onClick={() => navigate("/user/profile")}>
             <PersonOutlineIcon
-              fill={pathMatchRoute("/profile") ? "#2c2c2c" : "#8f8f8f"}
+              fill={pathMatchRoute("/user") ? "#ffffff" : "#8f8f8f"}
               width="36px"
               height="36px"
             />
             <p
               className={
-                pathMatchRoute("/profile")
+                pathMatchRoute("/user/profile")
                   ? "navbarListItemNameActive"
                   : "navbarListItemName"
               }

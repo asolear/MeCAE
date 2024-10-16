@@ -30,6 +30,7 @@ button {
 .passwordInput,
 .emailInput,
 .nameInput,
+.roleSelectDiv,
 .textarea {
     box-shadow: rgba(0, 0, 0, 0.11);
     border: none;
@@ -49,6 +50,7 @@ button {
     .passwordInput,
     .emailInput,
     .nameInput,
+    .roleSelectDiv,
     .textarea {
         padding: 0 5rem;
     }
@@ -62,7 +64,7 @@ button {
 
 .primaryButton {
     cursor: pointer;
-    background: #00cc66;
+    background: #1c597c;
     border-radius: 1rem;
     padding: 0.85rem 2rem;
     color: #ffffff;
@@ -128,12 +130,12 @@ button {
     justify-content: center;
     align-items: center;
 }
-
+1c597c
 .loadingSpinner {
     width: 64px;
     height: 64px;
     border: 8px solid;
-    border-color: #00cc66 transparent #00cc66 transparent;
+    border-color: #1c597c transparent #1c597c transparent;
     border-radius: 50%;
     animation: spin 1.2s linear infinite;
 }
@@ -155,15 +157,17 @@ button {
 
 .navbar {
     position: fixed;
+    transition: background-color 0.3s ease;
     left: 0;
     bottom: 0;
     right: 0;
     height: 85px;
-    background-color: #ffffff;
+    background-color: #1c597c;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
+    color:"#ffffff";
 
 }
 
@@ -201,7 +205,7 @@ button {
 }
 
 .navbarListItemNameActive {
-    color: #2c2c2c;
+    color: #ffffff;
 }
 
 .footer {
@@ -214,7 +218,7 @@ button {
 }
 
 .footer>p {
-    color: #2c2c2c;
+    color: #ffffff;
 }
 
 @media (min-width: 1024px) {
@@ -224,7 +228,7 @@ button {
         height: 85px;
         justify-content: space-between;
         align-items: center;
-        background-color: rgb(255, 255, 255, 0.9);
+        background-color: #1c597c;
     }
 
     .navbarBrand {
@@ -257,7 +261,10 @@ button {
 }
 
 
-
+.roleSelectDiv {
+    margin-bottom: 2rem;
+    background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
+}
 .nameInput {
     margin-bottom: 2rem;
     background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
@@ -287,7 +294,7 @@ button {
 
 .forgotPasswordLink {
     cursor: pointer;
-    color: #00cc66;
+    color: #1c597c;
     font-weight: 600;
     text-align: right;
 }
@@ -329,7 +336,7 @@ button {
     align-items: center;
     width: 3rem;
     height: 3rem;
-    background-color: #00cc66;
+    background-color: #1c597c;
     border-radius: 50%;
 }
 
@@ -368,7 +375,7 @@ button {
 
 .registerLink {
     margin-top: 1rem;
-    color: #00cc66;
+    color: #1c597c;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
@@ -549,7 +556,7 @@ button {
     margin-top: 0.5rem;
     font-weight: 600;
     font-size: 1.1rem;
-    color: #00cc66;
+    color: #1c597c;
     margin-bottom: 0;
     display: flex;
     align-items: center;
@@ -628,7 +635,7 @@ button {
 
 .listingType {
     padding: 0.25rem 0.5rem;
-    background-color: #00cc66;
+    background-color: #1c597c;
     color: #ffffff;
     border-radius: 2rem;
     display: inline;
@@ -727,7 +734,7 @@ button {
     font-size: 1rem;
     font-weight: 600;
     color: #ffffff;
-    background-color: #00cc66;
+    background-color: #1c597c;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
 }
@@ -745,7 +752,7 @@ button {
 .changePersonalDetails {
     cursor: pointer;
     font-weight: 600;
-    color: #00cc66;
+    color: #1c597c;
 }
 
 .profileCard {
@@ -843,7 +850,7 @@ button {
 }
 
 .formButtonActive {
-    background-color: #00cc66;
+    background-color: #1c597c;
     color: #ffffff;
 }
 
@@ -900,7 +907,7 @@ button {
 }
 
 .formInputFile::-webkit-file-upload-button {
-    background-color: #00cc66;
+    background-color: #1c597c;
     border: none;
     color: #ffffff;
     font-weight: 600;

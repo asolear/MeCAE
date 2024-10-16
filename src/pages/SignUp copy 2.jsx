@@ -10,22 +10,11 @@ import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRig
 const SignUp = () => {
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
-        role: 'propietario' // Valor por defecto "comprador"
+        email: ''
     })
 
-    const { name, email, role } = formData
+    const { name, email } = formData
     const navigate = useNavigate()
-
-    // Lista de correos electrónicos permitidos para compradores
-    // https://www.miteco.gob.es/es/energia/eficiencia/cae/agentes.html
-
-    const allowedEmailsForBuyers = [
-        "asolearenergia@gmail.com",
-        "comprador2@example.com",
-        "comprador3@example.com",
-        // Añade aquí todos los emails permitidos
-    ]
 
     // Función para generar una contraseña aleatoria
     const generateRandomPassword = () => {
@@ -46,11 +35,6 @@ const SignUp = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault()
-        // Verificar si el usuario es un comprador y si su email está en la lista permitida
-        if (role === "comprador" && !allowedEmailsForBuyers.includes(email)) {
-            toast.error('Agente del Sistema de CAE no registrado')
-            return
-        }
 
         try {
             const auth = getAuth()
@@ -70,7 +54,7 @@ const SignUp = () => {
                 displayName: name
             })
 
-            // Guardar la información del usuario en Firestore, incluyendo el rol
+            // Guardar la información del usuario en Firestore
             const formDataCopy = { ...formData }
             formDataCopy.timestamp = serverTimestamp()
 
@@ -111,14 +95,6 @@ const SignUp = () => {
                         id="email"
                         value={email}
                         onChange={onChange} />
-
-                    {/* Selector para elegir el tipo de usuario */}
-                    <div >
-                        <select className="roleSelectDiv" id="role" value={role} onChange={onChange}>
-                        <option value="propietario">Propietarios del ahorro</option>
-                        <option value="comprador">Sujetos Delegados</option>
-                        </select>
-                    </div>
 
                     <div className="signUpBar">
                         <p className="signUpText">Sign Up</p>
