@@ -4,19 +4,24 @@ const AboutUs = () => {
   return (
     <div style={containerStyle}>
       <div>
-      <section>
-        <h1>Sobre Nosotros</h1>
-        <p>Somos una empresa dedicada a ofrecer los mejores servicios en el Sistema de Certificados de Ahorro Energético (CAE). 
-          Nuestra misión es participar en el mercado primario facilitando el contacto entre 'Propietarios del ahorro' y 'Sujetos obligados / delegados'.</p>
-      </section>
-      <section>
-        <h2>Contáctanos</h2>
-        <p><strong>Dirección:</strong> C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga</p>
-        <p><strong>Teléfono:</strong> +34 951 73 34 91</p>
-        <p><strong>Email:</strong> info@ibercae.com</p>
-      </section>
+        <section>
+          <h1>Sobre Nosotros</h1>
+          <p>
+            MeCAE es una<strong><em> plataforma independiente de intermediación</em></strong> en el Sistema de Certificados de Ahorro Energético (CAE).
+          </p>
 
-      {/* <section>
+          <p>
+            MeCAE actua en el mercado primario facilitando el contacto entre los cedentes (Propietarios del ahorro)  y los cesionarios (Sujetos obligados / delegados) del mercado .
+          </p>
+        </section>
+        <section>
+          <h2>Contáctanos</h2>
+          <p><strong>Dirección:</strong> C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga</p>
+          <p><strong>Teléfono:</strong> +34 951 73 34 91</p>
+          <p><strong>Email:</strong> info@ibercae.com</p>
+        </section>
+
+        {/* <section>
         <h2>Nuestra Historia</h2>
         <p>Fundada en [año], hemos crecido hasta convertirnos en líderes en [enfoque o mercado específico], ofreciendo soluciones innovadoras a nuestros clientes.</p>
       </section>
@@ -39,7 +44,7 @@ const AboutUs = () => {
         <h2>Contáctanos</h2>
         <p>Si tienes alguna pregunta, no dudes en contactarnos en info@tuempresa.com o visítanos en C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga.</p>
       </section> */}
-    </div>
+      </div>
     </div>
   );
 };
