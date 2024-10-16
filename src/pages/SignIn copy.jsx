@@ -50,7 +50,7 @@ const SignIn = () => {
         <>
             <div className="pageContainer">
                 <header>
-                    <p className="pageHeader">Acceso Área Mercado</p>
+                    <p className="pageHeader">Acceso al Mercado</p>
                 </header>
                 <form onSubmit={onSubmit}>
                     <input type="email"
@@ -75,10 +75,10 @@ const SignIn = () => {
                         />
                     </div>
 
-                    <Link to='/forgot-password' className="forgotPasswordLink">¿Has olvidado tu contraseña?</Link>
+                    <Link to='/forgot-password' className="forgotPasswordLink">Forgot Password</Link>
 
                     <div className="signInBar">
-                        <p className="signInText">Acceder</p>
+                        <p className="signInText">Sign In</p>
                         <button className="signInButton">
                             <ArrowRightIcon fill="#ffffff" width='34px' height='34px' />
                         </button>
@@ -88,7 +88,7 @@ const SignIn = () => {
                 <OAuth />
 
                 <Link to='/sign-up' className="registerLink">
-                ¿No tienes cuenta? Registro aqui!
+                    No Account? Sign Up Here!
                 </Link>
 
             </div>

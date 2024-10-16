@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
   return (
     <div style={containerStyle}>
       <h1>Política de Privacidad</h1>
-      <p><strong>Última actualización: [Fecha]</strong></p>
+      <p><strong>Última actualización: {new Date().getFullYear()}</strong></p>
 
       <h2>1. Información que Recopilamos</h2>
       <p>

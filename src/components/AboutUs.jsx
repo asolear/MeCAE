@@ -7,7 +7,7 @@ const AboutUs = () => {
       <section>
         <h1>Sobre Nosotros</h1>
         <p>Somos una empresa dedicada a ofrecer los mejores servicios en el Sistema de Certificados de Ahorro Energético (CAE). 
-          Nuestra misión es participar en el mercado primario facilitando el contacto entre 'Propietarios del ahorro' y 'Sujetos obligados y delegados'.</p>
+          Nuestra misión es participar en el mercado primario facilitando el contacto entre 'Propietarios del ahorro' y 'Sujetos obligados / delegados'.</p>
       </section>
       <section>
         <h2>Contáctanos</h2>
