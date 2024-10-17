@@ -2,10 +2,18 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, updateProfile } from "firebase/auth";
 import { db } from "../firebase.config";
-import { updateDoc, doc, collection, getDocs, query, where, orderBy, deleteDoc, getDoc } from "firebase/firestore";
+import {
+  updateDoc,
+  doc,
+  collection,
+  getDocs,
+  query,
+  where,
+  orderBy,
+  deleteDoc,
+} from "firebase/firestore";
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
-import Offers from "./Offers";
 import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
 import homeIcon from "../assets/svg/homeIcon.svg";
 
@@ -18,31 +26,10 @@ const Profile = () => {
     name: auth.currentUser.displayName,
     email: auth.currentUser.email,
   });
-  const [role, setRole] = useState(""); // Para almacenar el rol del usuario
 
   const { name, email } = formData;
 
   const navigate = useNavigate();
-
-  // Obtener el rol del usuario
-  useEffect(() => {
-    const fetchUserRole = async () => {
-      try {
-        const userRef = doc(db, "users", auth.currentUser.uid);
-        const userSnap = await getDoc(userRef);
-
-        if (userSnap.exists()) {
-          setRole(userSnap.data().role); // Asigna el rol del usuario
-        } else {
-          console.error("El documento de usuario no existe");
-        }
-      } catch (error) {
-        console.error("Error al obtener el rol del usuario", error);
-      }
-    };
-
-    fetchUserRole();
-  }, [auth.currentUser.uid]);
 
   useEffect(() => {
     const fetchUserListings = async () => {
@@ -78,10 +65,12 @@ const Profile = () => {
   const onSubmit = async () => {
     try {
       if (auth.currentUser.displayName !== name) {
+        // Update display name in firebase
         await updateProfile(auth.currentUser, {
           displayName: name,
         });
 
+        //  Update in firebase
         const userRef = doc(db, "users", auth.currentUser.uid);
         await updateDoc(userRef, {
           name,
@@ -157,23 +146,11 @@ const Profile = () => {
           </form>
         </div>
 
-        {/* Ocultar el enlace si el rol es 'comprador' */}
-        {role !== "comprador" && (
-          <Link to="/user/create-listing" className="createListing">
-            <p>Cede tu ahorro de energía a cambio de una contraprestación</p>
-            <img src={arrowRight} alt="arrow right" />
-          </Link>
-        )}
-
-        {role == "comprador" && (
-
-          <>
-            <p className="listingText">Your Listingsss</p>
-            <ul className="listingsList">
-              <Offers />
-            </ul>
-          </>)}
-
+        <Link to="/user/create-listing" className="createListing">
+          {/* <img src={homeIcon} alt="home" /> */}
+          <p>Cede tu ahorro de energía a cambio de una contraprestaciónmmm</p>
+          <img src={arrowRight} alt="arrow right" />
+        </Link>
 
         {!loading && listings?.length > 0 && (
           <>

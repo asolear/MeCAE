@@ -5,7 +5,6 @@ import { db } from "../firebase.config";
 import { updateDoc, doc, collection, getDocs, query, where, orderBy, deleteDoc, getDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
-import Offers from "./Offers";
 import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
 import homeIcon from "../assets/svg/homeIcon.svg";
 
@@ -164,16 +163,6 @@ const Profile = () => {
             <img src={arrowRight} alt="arrow right" />
           </Link>
         )}
-
-        {role == "comprador" && (
-
-          <>
-            <p className="listingText">Your Listingsss</p>
-            <ul className="listingsList">
-              <Offers />
-            </ul>
-          </>)}
-
 
         {!loading && listings?.length > 0 && (
           <>
