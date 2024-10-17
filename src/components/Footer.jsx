@@ -32,7 +32,7 @@ const Footer = () => {
 
 
       <button onClick={toggleAboutUs} className='navbarListItem'>MeCAE&copy; {footerYear}</button>
-      <button onClick={toggleAboutUs} className='navbarListItem'>Sobre Nosotros</button>
+      <button onClick={toggleAboutUs} className='navbarListItem'>Sobre MeCAE</button>
       <button onClick={toggleTermsOfUse} className='navbarListItem'>Términos de Uso</button>
       <button onClick={togglePrivacyPolicy} className='navbarListItem'>Política de Privacidad</button>
 

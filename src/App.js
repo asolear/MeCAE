@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import PrivateRoute from './components/PrivateRoute';
 import Redirect from './components/Redirect';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
 import Explore from './pages/Explore';
 import Offers from './pages/Offers';
 import Category from './pages/Category';
@@ -25,7 +26,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path='/MeCAE' element={<Explore />} />
-                    <Route path='/' element={<Explore />} />
+                    <Route path='/' element={<Home />} />
                     <Route path='/offers' element={<Offers />} />
                     <Route path='/category/:categoryName' element={<Category />} />
                     <Route path='/user' element={<PrivateRoute redirectTo="/sign-in" />}>

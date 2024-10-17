@@ -1,49 +1,31 @@
+import { Link } from "react-router-dom"
+import rentCategoryImage from '../assets/jpg/industrial.jpeg'
+import saleCategoryImage from '../assets/jpg/transporte.jpeg'
+import Slider from "../components/Slider"
 
 const Explore = () => {
     return (
         <div className="explore">
-
-            <header >
-
-                <p
-                    style={{
-                        // color: "#ffffff",
-                        fontSize: "42px",  // Ajusta el tamaño de la fuente
-                        // transform: "scale(.9, .5)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-                        // display: "inline-block",  // Necesario para que el span respete el transform
-                        textAlign: "center",
-                    }}>
-                    Mercado de Ahorros Energéticos.
-                </p>
-
-                <p
-                    style={{
-
-
-                        // color: "#ffffff",
-                        fontSize: "12px",  // Ajusta el tamaño de la fuente
-                        // transform: "scale(1.0, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-                        // display: "inline-block",  // Necesario para que el span respete el transform
-                        textAlign: "center",
-                    }}>
-                    Sistema de Certificados de Ahorro Energético (CAE)
-                </p>
-                <p
-                    style={{
-                        // color: "#ffffff",
-                        // fontSize: "72px",  // Ajusta el tamaño de la fuente
-                        // transform: "scale(.9, .4)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-                        // display: "inline-block",  // Necesario para que el span respete el transform
-                        textAlign: "center",
-                    }}>
-                    Plataforma Independiente de Intermediación.
-                </p>
-
-
+            <header>
+                <p className="pageHeader">ahorros transformables en CAE.</p>
             </header>
 
+            <main>
+                <Slider />
 
+                <p className="exploreCategoryHeading">Categories</p>
+                <div className="exploreCategories">
+                    <Link to='/category/rent'>
+                        <img src={rentCategoryImage} alt="rent" className="exploreCategoryImg" />
+                        <p className="exploreCategoryName">Places For Rent</p>
+                    </Link>
 
+                    <Link to='/category/sale'>
+                        <img src={saleCategoryImage} alt="sale" className="exploreCategoryImg" />
+                        <p className="exploreCategoryName">Places For Sale</p>
+                    </Link>
+                </div>
+            </main>
         </div>
     )
 }

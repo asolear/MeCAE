@@ -113,7 +113,7 @@ const Profile = () => {
 
       <main>
         <div className="profileDetailsHeader">
-          <p className="profileDetailsText">Personal Details</p>
+          <p className="profileDetailsText">Usuario</p>
           <p
             className="changePersonalDetails"
             onClick={() => {
@@ -121,7 +121,7 @@ const Profile = () => {
               setChangeDetails((prevState) => !prevState);
             }}
           >
-            {changeDetails ? "Done" : "Change"}
+            {changeDetails ? "Hecho" : "Cambiar"}
           </p>
         </div>
 
@@ -147,8 +147,8 @@ const Profile = () => {
         </div>
 
         <Link to="/user/create-listing" className="createListing">
-          <img src={homeIcon} alt="home" />
-          <p>Cede tu ahorro de energía a cambio de una contraprestación, económica o de otro tipo</p>
+          {/* <img src={homeIcon} alt="home" /> */}
+          <p>Cede tu ahorro de energía a cambio de una contraprestación</p>
           <img src={arrowRight} alt="arrow right" />
         </Link>
 

@@ -48,7 +48,7 @@ const SignUp = () => {
         e.preventDefault()
         // Verificar si el usuario es un comprador y si su email está en la lista permitida
         if (role === "comprador" && !allowedEmailsForBuyers.includes(email)) {
-            toast.error('Agente del Sistema de CAE no registrado')
+            toast.error('Por vafor utilice el email de "Agentes del Sistema de CAE" vigente en MITECO')
             return
         }
 
@@ -115,8 +115,8 @@ const SignUp = () => {
                     {/* Selector para elegir el tipo de usuario */}
                     <div >
                         <select className="roleSelectDiv" id="role" value={role} onChange={onChange}>
-                        <option value="propietario">Propietarios del ahorro</option>
-                        <option value="comprador">Sujetos Delegados</option>
+                        <option value="propietario">Propietario del ahorro energético</option>
+                        <option value="comprador">Sujetos obligados o delegado</option>
                         </select>
                     </div>
 

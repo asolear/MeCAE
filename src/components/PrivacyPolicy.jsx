@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
       </p>
       <ul>
         <li><strong>Correo electrónico</strong>: info@ibercae.com</li>
-        <li><strong>Dirección</strong>: C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga</li>
+        <li><strong>Dirección</strong>: C. Moby Dick, 30. 29004 Málaga</li>
       </ul>
     </div>
   );

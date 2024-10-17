@@ -45,7 +45,7 @@ const Navbar = () => {
                   : "navbarListItemName"
               }
             >
-              Ahorros
+              Inicio
             </p>
           </li>
           <li className="navbarListItem" onClick={() => navigate("/offers")}>
