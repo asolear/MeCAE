@@ -2,6 +2,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { ReactComponent as OfferIcon } from "../assets/svg/localOfferIcon.svg";
 import { ReactComponent as ExploreIcon } from "../assets/svg/exploreIcon.svg";
 import { ReactComponent as PersonOutlineIcon } from "../assets/svg/personOutlineIcon.svg";
+// import { ReactComponent as LogoIcon } from "../assets/svg/logoefi.svg";
+import mySvg from "../assets/svg/energy-efficiency-154006.svg"; // Ajusta la ruta
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -18,20 +20,15 @@ const Navbar = () => {
         style={{ cursor: "pointer" }}
         onClick={() => navigate("/")}
       >
-        {/* <img
-          src="/logo.png" // Cambia 'logo.png' al nombre de tu archivo
-          alt="Logo"
-          style={{ height: '40px', marginRight: '8px' }} // Aumenta la altura según sea necesario
-        /> */}
-        {/* <span style={{ color: "#ffffff", }}>MeCAE</span> */}
-        <span style={{ 
-  color: "#ffffff", 
-  fontSize: "72px",  // Ajusta el tamaño de la fuente
-  transform: "scale(.2, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-  display: "inline-block",  // Necesario para que el span respete el transform
-}}>
-  MeCAE
-</span>
+        <span style={{
+          color: "#ffffff",
+          fontSize: "72px",  // Ajusta el tamaño de la fuente
+          transform: "scale(.2, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
+          display: "inline-block",  // Necesario para que el span respete el transform
+        }}>
+
+          MeCAE
+        </span>
       </nav>
       <nav className="navbarNav">
         <ul className="navbarListItems">
