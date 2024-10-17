@@ -32,6 +32,7 @@ const Footer = () => {
 
 
       <button onClick={toggleAboutUs} className='navbarListItem'>MeCAE&copy; {footerYear}</button>
+      <button onClick={toggleAboutUs} className='navbarListItem'>Sobre Nosotros</button>
       <button onClick={toggleTermsOfUse} className='navbarListItem'>Términos de Uso</button>
       <button onClick={togglePrivacyPolicy} className='navbarListItem'>Política de Privacidad</button>
 
@@ -40,7 +41,7 @@ const Footer = () => {
           <div style={scrollableContainerStyle}>
             <TermsOfUse />
           </div>
-          <button  className='formButtonActive' onClick={toggleTermsOfUse}>Cerrar</button>
+          <button className='formButtonActive' onClick={toggleTermsOfUse}>Cerrar</button>
 
         </div>
       )}
@@ -51,10 +52,10 @@ const Footer = () => {
           <div style={scrollableContainerStyle}>
             <PrivacyPolicy />
           </div>
-          <button  className='formButtonActive' onClick={togglePrivacyPolicy}>Cerrar</button>
+          <button className='formButtonActive' onClick={togglePrivacyPolicy}>Cerrar</button>
         </div>
       )}
-      
+
       {/* Modal para la AboutUs */}
       {showAboutUs && (
         <div style={modalStyle}>

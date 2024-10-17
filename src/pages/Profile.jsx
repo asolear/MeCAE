@@ -148,7 +148,7 @@ const Profile = () => {
 
         <Link to="/user/create-listing" className="createListing">
           <img src={homeIcon} alt="home" />
-          <p>Sell or rent your house.</p>
+          <p>Cede tu ahorro de energía a cambio de una contraprestación, económica o de otro tipo</p>
           <img src={arrowRight} alt="arrow right" />
         </Link>
 

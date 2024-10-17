@@ -1,44 +1,34 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as DeleteIcon } from '../assets/svg/deleteIcon.svg'
-import { ReactComponent as EditIcon } from '../assets/svg/editIcon.svg'
-import bedIcon from '../assets/svg/bedIcon.svg'
-import bathtubIcon from '../assets/svg/bathtubIcon.svg'
+import { ReactComponent as DeleteIcon } from '../assets/svg/deleteIcon.svg';
+import { ReactComponent as EditIcon } from '../assets/svg/editIcon.svg';
 
 const ListingItem = ({ listing, id, onEdit, onDelete }) => {
-
     return (
         <li className="categoryListing">
             <Link to={`/category/${listing.type}/${id}`}
                 className="categoryListingLink">
-                <img src={listing.imageUrls[0]} alt={listing.name}
-                    className="categoryListingImg" />
+                {/* You no longer have images, so the img element is removed */}
+
                 <div className="categoryListingDetails">
-                    <p className="categoryListingLocation">{listing.location}</p>
+                    {/* Display the listing's name */}
                     <p className="categoryListingName">{listing.name}</p>
-                    <p className="categoryListingPrice">
-                        ${listing.offer ?
-                            listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                            : listing.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                        {listing.type === 'rent' && ' / Month'}
+
+                    {/* Display the listing's type */}
+                    <p className="categoryListingType">
+                        {listing.type === 'rent' ? 'For Rent' : 'For Sale'}
                     </p>
 
-                    <div className="categoryListingInfoDiv">
-                        <img src={bedIcon} alt="bed" />
-                        <p className="categoryListingText">
-                            {listing.bedrooms} Bedroom{listing.bedrooms > 1 ? 's' : ''}
-                        </p>
-                        <img src={bathtubIcon} alt="bathtub" />
-                        <p className="categoryListingText">
-                            {listing.bathrooms} Bathroom{listing.bathrooms > 1 ? 's' : ''}
-                        </p>
-                    </div>
+                    {/* Display the listing's timestamp if you want to show when it was created */}
+                    <p className="categoryListingTimestamp">
+                        Listed on: {new Date(listing.timestamp?.seconds * 1000).toLocaleDateString()}
+                    </p>
                 </div>
             </Link>
 
             {onDelete && (
                 <DeleteIcon className="removeIcon"
                     fill='rgb(231, 76, 60)'
-                    onClick={() => onDelete(listing.id, listing.name)} />
+                    onClick={() => onDelete(id, listing.name)} />
             )}
 
             {onEdit && (
@@ -47,7 +37,7 @@ const ListingItem = ({ listing, id, onEdit, onDelete }) => {
                     onClick={() => onEdit(id)} />
             )}
         </li>
-    )
-}
+    );
+};
 
-export default ListingItem
+export default ListingItem;

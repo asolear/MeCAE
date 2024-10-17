@@ -28,6 +28,7 @@ const Listing = () => {
             const docSnap = await getDoc(docRef)
 
             if (docSnap.exists()) {
+                // console.log(docSnap.data())
                 setListing(docSnap.data())
                 setLoading(false)
             }
@@ -42,32 +43,29 @@ const Listing = () => {
 
     return (
         <main>
-            {/* Only render the Swiper if imageUrls exist and is an array */}
-            {listing.imageUrls && Array.isArray(listing.imageUrls) && (
-                <div className="wrapSwiper">
-                    <Swiper
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        navigation
-                        pagination={{ clickable: true }}>
-                        {listing.imageUrls.map((url, index) => (
-                            <SwiperSlide key={index}>
-                                <div
-                                    className="swiperSlideDiv"
-                                    style={{
-                                        width: '100%',
-                                        height: '40vw',
-                                        background: `url(${listing.imageUrls[index]}) center no-repeat`,
-                                        backgroundSize: 'cover'
-                                    }}
-                                >
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            )}
+            <div className="wrapSwiper">
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}>
+                    {listing.imageUrls.map((url, index) => (
+                        <SwiperSlide key={index}>
+                            <div
+                                className="swiperSlideDiv"
+                                style={{
+                                    width: '100%',
+                                    height: '40vw',
+                                    background: `url(${listing.imageUrls[index]}) center no-repeat`,
+                                    backgroundSize: 'cover'
+                                }}
+                            >
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
 
             <div className="shareIconDiv" onClick={() => {
                 navigator.clipboard.writeText(window.location.href)
@@ -85,8 +83,8 @@ const Listing = () => {
                 <p className="listingName">
                     {listing.name} - $
                     {listing.offer ?
-                        listing.discountedPrice?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        : listing.regularPrice?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        : listing.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                 </p>
 
                 <p className="listingLocation">{listing.location}</p>
@@ -110,6 +108,24 @@ const Listing = () => {
                     <li>{listing.furnished && 'Furnished'}</li>
                 </ul>
 
+                <p className="listingLocationTitle">Location</p>
+
+                <div className="leafletContainer">
+                    <MapContainer style={{ height: '100%', width: '100%' }}
+                        center={[listing.geolocation.lat, listing.geolocation.lng]}
+                        zoom={13}
+                        scrollWheelZoom={false}
+                    >
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+
+                        <Marker position={[listing.geolocation.lat, listing.geolocation.lng]}>
+                            <Popup>{listing.location}</Popup>
+                        </Marker>
+                    </MapContainer>
+                </div>
 
                 {auth.currentUser?.uid !== listing.userRef && (
                     <Link
@@ -124,3 +140,5 @@ const Listing = () => {
 }
 
 export default Listing
+
+// stackoverflow: how to fix error failed to compile node modules react leaflet core esm path

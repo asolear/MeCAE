@@ -7,16 +7,17 @@ const AboutUs = () => {
         <section>
           <h1>Sobre Nosotros</h1>
           <p>
-            MeCAE es una<strong><em> plataforma independiente de intermediación</em></strong> en el Sistema de Certificados de Ahorro Energético (CAE).
+            MeCAE es una<strong><em> plataforma libre, independiente y gratuita de intermediación</em></strong> en el Sistema de Certificados de Ahorro Energético (CAE).
           </p>
 
           <p>
-            MeCAE actua en el mercado primario facilitando el contacto entre los cedentes (Propietarios del ahorro)  y los cesionarios (Sujetos obligados / delegados) del mercado .
+            MeCAE actua en el mercado primario facilitando el contacto entre los propietarios de los ahorros energéticos y sus compradores 
+            (sujetos obligados o delegados).
           </p>
         </section>
         <section>
           <h2>Contáctanos</h2>
-          <p><strong>Dirección:</strong> C. de Marie Curie, 35, PTA, Campanillas, 29590 Málaga</p>
+          <p><strong>Dirección:</strong> C. Moby Dick, 30. 29004 Málaga</p>
           <p><strong>Teléfono:</strong> +34 951 73 34 91</p>
           <p><strong>Email:</strong> info@ibercae.com</p>
         </section>

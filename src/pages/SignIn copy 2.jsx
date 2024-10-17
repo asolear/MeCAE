@@ -37,7 +37,7 @@ const SignIn = () => {
 
             if (userCredential.user) {
                 toast.success('Logged in successfully.')
-                navigate('/user/profile') // Redirect to /user/profile after successful login
+                navigate('/')
             }
 
         } catch (error) {
@@ -76,6 +76,7 @@ const SignIn = () => {
                     </div>
 
                     <div className="signInBar">
+                        {/* <p className="signInText">Acceder</p> */}
                         <button className="signInButton">
                             <ArrowRightIcon fill="#ffffff" width='34px' height='34px' />
                         </button>
@@ -86,6 +87,8 @@ const SignIn = () => {
                 </form>
 
                 {/* <OAuth /> */}
+
+
             </div>
         </>
     )
