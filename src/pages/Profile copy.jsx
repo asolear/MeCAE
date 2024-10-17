@@ -8,18 +8,19 @@ import {
   collection,
   getDocs,
   query,
+  where,
   orderBy,
   deleteDoc,
 } from "firebase/firestore";
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
 import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
+import homeIcon from "../assets/svg/homeIcon.svg";
 
 const Profile = () => {
   const auth = getAuth();
   const [loading, setLoading] = useState(true);
-  const [listings, setListings] = useState([]);
-  const [role, setRole] = useState(null); // State for user role
+  const [listings, setListings] = useState(null);
   const [changeDetails, setChangeDetails] = useState(false);
   const [formData, setFormData] = useState({
     name: auth.currentUser.displayName,
@@ -31,40 +32,29 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchAllListings = async () => {
+    const fetchUserListings = async () => {
       const listingsRef = collection(db, "listings");
-      const q = query(listingsRef, orderBy("timestamp", "desc")); // Fetch all listings
+      const q = query(
+        listingsRef,
+        where("userRef", "==", auth.currentUser.uid),
+        orderBy("timestamp", "desc")
+      );
       const querySnap = await getDocs(q);
-      const allListings = [];
+      let listings = [];
 
       querySnap.forEach((doc) => {
-        return allListings.push({
+        return listings.push({
           id: doc.id,
           data: doc.data(),
         });
       });
 
-      setListings(allListings);
+      setListings(listings);
       setLoading(false);
     };
 
-    const fetchUserRole = async () => {
-      const userRef = doc(db, "users", auth.currentUser.uid);
-      const userDoc = await getDocs(userRef);
-      if (userDoc.exists()) {
-        const userRole = userDoc.data().role; // Get user role
-        setRole(userRole); // Set the user role from the document
-
-        // Navigate to offers page if the user is a 'comprador'
-        if (userRole === "comprador") {
-          navigate("/offers");
-        }
-      }
-    };
-
-    fetchAllListings();
-    fetchUserRole();
-  }, [auth.currentUser.uid, navigate]);
+    fetchUserListings();
+  }, [auth.currentUser.uid]);
 
   const onLogout = () => {
     navigate("/", { replace: true });
@@ -80,7 +70,7 @@ const Profile = () => {
           displayName: name,
         });
 
-        // Update in firebase
+        //  Update in firebase
         const userRef = doc(db, "users", auth.currentUser.uid);
         await updateDoc(userRef, {
           name,
@@ -156,27 +146,15 @@ const Profile = () => {
           </form>
         </div>
 
-        {/* Render the link only if the user is an owner */}
-        {role === "propietario" && (
-          <Link to="/user/create-listing" className="createListing">
-            <p>Cede tu ahorro de energía a cambio de una contraprestación</p>
-            <img src={arrowRight} alt="arrow right" />
-          </Link>
-        )}
-
-
-        {/* Render the link only if the user is an owner */}
-        {role === "comprador" && (
-          <Link to="Offers" className="createListing">
-            <p>Cede tu ahorro de energía a cambio de una contraprestación</p>
-            <img src={arrowRight} alt="arrow right" />
-          </Link>
-        )}
-
+        <Link to="/user/create-listing" className="createListing">
+          {/* <img src={homeIcon} alt="home" /> */}
+          <p>Cede tu ahorro de energía a cambio de una contraprestación</p>
+          <img src={arrowRight} alt="arrow right" />
+        </Link>
 
         {!loading && listings?.length > 0 && (
           <>
-            <p className="listingText">All Listings</p> {/* Updated the text */}
+            <p className="listingText">Your Listings</p>
             <ul className="listingsList">
               {listings.map((listing) => (
                 <ListingItem
