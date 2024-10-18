@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div >
+    <div className="containerStyle">
       <div>
         <section>
           <h1>Sobre Nosotros</h1>
@@ -50,15 +50,6 @@ const AboutUs = () => {
   );
 };
 
-// Estilos para el contenedor
-const containerStyle = {
-  padding: '20px',
-  maxWidth: '800px',
-  margin: '0 auto',
-  lineHeight: '1.6',
-  backgroundColor: '#f9f9f9',
-  borderRadius: '5px',
-  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-};
+
 
 export default AboutUs;

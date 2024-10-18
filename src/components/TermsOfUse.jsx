@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsOfUse = () => {
   return (
-    <div>
+    <div className="containerStyle">
       <h1>Términos de Uso</h1>
       <p><strong>Última actualización: {new Date().getFullYear()}</strong></p>
 
@@ -70,15 +70,5 @@ const TermsOfUse = () => {
   );
 };
 
-// Estilos para el contenedor
-const containerStyle = {
-  padding: '20px',
-  maxWidth: '800px',
-  margin: '0 auto',
-  lineHeight: '1.6',
-  backgroundColor: '#f9f9f9',
-  borderRadius: '5px',
-  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-};
 
 export default TermsOfUse;
