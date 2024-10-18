@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
 
-import CreateListingActuacion from "./CreateListingActuacion";
-
 const CreateListing = () => {
 
 
@@ -83,15 +81,28 @@ const CreateListing = () => {
 
     return (
         <div className="profile">
-
+            <header>
+                <p className="pageHeader">Actuación</p>
+            </header>
 
             <main>
-
                 <form onSubmit={onSubmit}>
 
-                    <CreateListingActuacion />
-
-                    <p className="pageHeader">Cedente</p>
+                    <div>
+                        <select
+                            className="roleSelectDiv"
+                            id="cedente"
+                            value={formData.type}
+                            onChange={onSelectChange}
+                        >
+                            <option value="jurídica">Persona jurídica</option>
+                            <option value="física">Persona física</option>
+                            <option value="comunidad">Comunidad de propietarios</option>
+                        </select>
+                    </div>
+                    <header>
+                        <p className="pageHeader">Cedente</p>
+                    </header>
                     <div>
                         <select
                             className="roleSelectDiv"

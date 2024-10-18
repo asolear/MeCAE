@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
 
-import CreateListingActuacion from "./CreateListingActuacion";
-
 const CreateListing = () => {
 
 
@@ -19,7 +17,7 @@ const CreateListing = () => {
     });
 
     // const { type, name } = formData;
-    const { name } = formData;
+    const {  name } = formData;
 
     const auth = getAuth();
     const navigate = useNavigate();
@@ -83,15 +81,12 @@ const CreateListing = () => {
 
     return (
         <div className="profile">
-
+            <header>
+                <p className="pageHeader">Cedente</p>
+            </header>
 
             <main>
-
                 <form onSubmit={onSubmit}>
-
-                    <CreateListingActuacion />
-
-                    <p className="pageHeader">Cedente</p>
                     <div>
                         <select
                             className="roleSelectDiv"
@@ -99,9 +94,9 @@ const CreateListing = () => {
                             value={formData.type}
                             onChange={onSelectChange}
                         >
-                            <option value="jurídica">Persona jurídica</option>
-                            <option value="física">Persona física</option>
-                            <option value="comunidad">Comunidad de propietarios</option>
+                            <option value="jurídica">persona jurídica</option>
+                            <option value="física">persona física</option>
+                            <option value="comunidad">comunidad de propietarios</option>
                         </select>
                     </div>
 
@@ -120,6 +115,7 @@ const CreateListing = () => {
                                 required
                             />
                         </div>
+
                     )}
 
 
