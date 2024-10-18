@@ -38,10 +38,10 @@ const Footer = () => {
 
       {showTermsOfUse && (
         <div style={modalStyle}>
+          <button className='formButtonActive' onClick={toggleTermsOfUse}>Cerrar</button>
           <div style={scrollableContainerStyle}>
             <TermsOfUse />
           </div>
-          <button className='formButtonActive' onClick={toggleTermsOfUse}>Cerrar</button>
 
         </div>
       )}
@@ -49,20 +49,20 @@ const Footer = () => {
       {/* Modal para la Política de Privacidad */}
       {showPrivacyPolicy && (
         <div style={modalStyle}>
+          <button className='formButtonActive' onClick={togglePrivacyPolicy}>Cerrar</button>
           <div style={scrollableContainerStyle}>
             <PrivacyPolicy />
           </div>
-          <button className='formButtonActive' onClick={togglePrivacyPolicy}>Cerrar</button>
         </div>
       )}
 
       {/* Modal para la AboutUs */}
       {showAboutUs && (
         <div style={modalStyle}>
+          <button onClick={toggleAboutUs} className='formButtonActive'>Cerrar</button>
           <div style={scrollableContainerStyle}>
             <AboutUs />
           </div>
-          <button onClick={toggleAboutUs} className='formButtonActive'>Cerrar</button>
         </div>
       )}
     </div>
@@ -87,7 +87,7 @@ const modalStyle = {
 };
 
 const scrollableContainerStyle = {
-  maxHeight: '60vh',
+  maxHeight: '80vh',
   overflowY: 'auto',
   marginBottom: '10px',
 };

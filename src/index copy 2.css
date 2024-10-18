@@ -877,8 +877,8 @@ button {
 
 .formInputName {
     padding: 0.9rem 1rem;
-    width: 100%;
-    /* max-width: 326px; */
+    width: 90%;
+    max-width: 326px;
 }
 
 .formInputAddress {
@@ -929,5 +929,3 @@ button {
     font-size: 0.8rem;
     opacity: 0.75;
 }
-
-

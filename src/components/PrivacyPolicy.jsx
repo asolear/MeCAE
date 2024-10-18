@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    <div style={containerStyle}>
+    <div>
       <h1>Política de Privacidad</h1>
       <p><strong>Última actualización: {new Date().getFullYear()}</strong></p>
 

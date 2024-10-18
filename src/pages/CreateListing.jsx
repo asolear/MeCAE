@@ -8,28 +8,16 @@ import { toast } from "react-toastify";
 
 const CreateListing = () => {
 
-    const [formularioActivo, setFormularioActivo] = useState(''); // Estado para controlar qué formulario mostrar
-
-    const mostrarFormulario1 = () => {
-        setFormularioActivo('formulario1');
-    };
-
-    const mostrarFormulario2 = () => {
-        setFormularioActivo('formulario2');
-    };
-
-
-
-
 
 
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
-        type: 'rent',
+        type: 'jurídica',
         name: '',
     });
 
-    const { type, name } = formData;
+    // const { type, name } = formData;
+    const {  name } = formData;
 
     const auth = getAuth();
     const navigate = useNavigate();
@@ -72,15 +60,24 @@ const CreateListing = () => {
     };
 
     const onMutate = (e) => {
-        setFormData((prevState) => ({
-            ...prevState,
+        setFormData({
+            ...formData,
             [e.target.id]: e.target.value,
-        }));
+        });
     };
 
     if (loading) {
         return <Spinner />;
     }
+
+
+    const onSelectChange = (e) => {
+        setFormData({
+            ...formData,
+            type: e.target.value, // Actualiza el tipo seleccionado
+        });
+    };
+
 
     return (
         <div className="profile">
@@ -90,37 +87,23 @@ const CreateListing = () => {
 
             <main>
                 <form onSubmit={onSubmit}>
-                    <div className="formButtons">
-                        <button type="button"
-                            className={type === 'jurídica' ? 'formButtonActive' : 'formButton'}
-                            id='type'
-                            value='jurídica'
-                            onClick={onMutate}>
-                            persona jurídica
-                        </button>
-                        <button type="button"
-                            className={type === 'física' ? 'formButtonActive' : 'formButton'}
-                            id='type'
-                            value='física'
-                            onClick={onMutate}>
-                            persona física
-                        </button>
-                        <button type="button"
-                            className={type === 'comunidad' ? 'formButtonActive' : 'formButton'}
-                            id='type'
-                            value='comunidad'
-                            onClick={onMutate}>
-                            comunidad de propietarios
-                        </button>
-
-
+                    <div>
+                        <select
+                            className="roleSelectDiv"
+                            id="cedente"
+                            value={formData.type}
+                            onChange={onSelectChange}
+                        >
+                            <option value="jurídica">persona jurídica</option>
+                            <option value="física">persona física</option>
+                            <option value="comunidad">comunidad de propietarios</option>
+                        </select>
                     </div>
 
 
-
                     {(formData.type === 'jurídica' || formData.type === 'física' || formData.type === 'comunidad') && (
-                        <div>
-                            <label className='formLabel'>Dª/D</label>
+                        <div className="exploreCategories">
+                            <label >Dª/D</label>
                             <input
                                 className='formInputName'
                                 type='text'
@@ -153,7 +136,7 @@ const CreateListing = () => {
 
                     )}
 
-                    {(formData.type === 'jurídica' ) && (
+                    {(formData.type === 'jurídica') && (
                         <div>
                             <label className='formLabel'>empresa</label>
                             <input
@@ -177,14 +160,8 @@ const CreateListing = () => {
                                 minLength='10'
                                 required
                             />
-
-
-
                         </div>
-
                     )}
-
-
 
                     <button type='submit' className='primaryButton createListingButton'>
                         Create Listing

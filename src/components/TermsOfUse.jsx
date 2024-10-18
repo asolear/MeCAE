@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsOfUse = () => {
   return (
-    <div style={containerStyle}>
+    <div>
       <h1>Términos de Uso</h1>
       <p><strong>Última actualización: {new Date().getFullYear()}</strong></p>
 

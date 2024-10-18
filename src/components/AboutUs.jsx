@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div style={containerStyle}>
+    <div >
       <div>
         <section>
           <h1>Sobre Nosotros</h1>
