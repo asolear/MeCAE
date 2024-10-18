@@ -7,12 +7,12 @@ const AboutUs = () => {
         <section>
           <h1>Sobre Nosotros</h1>
           <p>
-            MeCAE es una<strong><em> plataforma libre, independiente y gratuita de intermediación</em></strong> en el Sistema de Certificados de Ahorro Energético (CAE).
+            MeCAE es una<strong><em> plataforma de intermediación</em></strong> en el Sistema de Certificados de Ahorro Energético (CAE).
           </p>
 
           <p>
-            MeCAE actua en el mercado primario facilitando el contacto entre los propietarios de los ahorros energéticos y sus compradores 
-            (sujetos obligados o delegados).
+            MeCAE actua en el mercado primario facilitando el contacto entre los propietarios de los ahorros energéticos y 
+            los sujetos obligados o delegados.
           </p>
         </section>
         <section>
