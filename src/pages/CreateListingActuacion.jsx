@@ -105,6 +105,7 @@ const Formulario = ({ onSectorChange, onFichaChange }) => {
           <div>
             <label className='formLabel'>
               Ficha:
+              fsadf
               <select value={selectedFicha}
                 className="roleSelectDiv"
                 onChange={handleFichaChange} disabled={!selectedSector}>
