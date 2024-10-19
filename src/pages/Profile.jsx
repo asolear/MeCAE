@@ -116,7 +116,7 @@ const Profile = () => {
   return (
     <div className="profile">
       <header className="profileHeader">
-        <p className="pageHeader">My Profile</p>
+        <p className="pageHeader">Usuario</p>
         <button type="button" className="logOut" onClick={onLogout}>
           Logout
         </button>
@@ -124,7 +124,6 @@ const Profile = () => {
 
       <main>
         <div className="profileDetailsHeader">
-          <p className="profileDetailsText">Usuario</p>
           <p
             className="changePersonalDetails"
             onClick={() => {
@@ -159,7 +158,7 @@ const Profile = () => {
 
         {/* Ocultar el enlace si el rol es 'comprador' */}
         {role !== "comprador" && (
-          <Link to="/user/create-listing" className="createListing">
+          <Link to="/user/create-listing" className="primaryButton">
             <p>Cede tu ahorro de energía a cambio de una contraprestación</p>
             <img src={arrowRight} alt="arrow right" />
           </Link>

@@ -11,8 +11,8 @@ import CreateListingActuacion from "./CreateListingActuacion";
 const CreateListing = () => {
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
-        ahorroEnergia: 0,
-        contraprestacion: 0.10, // Valor por defecto para la contraprestación
+        ahorroEnergia: 200,
+        contraprestacion: 100, // Valor por defecto para la contraprestación
         estado: "prevista", // Estado por defecto
         titulo: '',
         tipo: 'Estándar', // Tipo por defecto

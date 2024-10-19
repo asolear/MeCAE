@@ -7,11 +7,12 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
   const [fichas, setFichas] = useState([]);
   const [selectedSector, setSelectedSector] = useState("");
   const [selectedFicha, setSelectedFicha] = useState("");
-  const [estado, setEstado] = useState("prevista");
+  const [estado, setEstado] = useState("realizada");
   const [formData, setFormData] = useState({
     titulo: '',
-    ahorroEnergia: 0,
-    contraprestacion: 0.10, // Valor por defecto (ejemplo 0.10 €/kWh)
+    ahorroEnergia: 220,
+    contraprestacion: 100, // Valor por defecto (ejemplo 0.10 €/kWh)
+    holacaracola:33,
   });
 
   useEffect(() => {
@@ -97,7 +98,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
       <div>
         <label className='formLabel'>
           Tipo:
-          <select value={tipo} className="roleSelectDiv" onChange={handleTipoChange}>
+          <select value={tipo} className="formInputName" onChange={handleTipoChange}>
             <option value="Estándar">Estándar</option>
             <option value="Singular">Singular</option>
           </select>
@@ -112,7 +113,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
               Sector:
               <select
                 value={selectedSector}
-                className="roleSelectDiv"
+                className="formInputName"
                 onChange={handleSectorChange}>
                 {sectores.map((sector, index) => (
                   <option key={index} value={sector}>
@@ -128,7 +129,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
               Ficha:
               <select
                 value={selectedFicha}
-                className="roleSelectDiv"
+                className="formInputName"
                 onChange={handleFichaChange} disabled={!selectedSector}>
                 {fichas.map((ficha, index) => (
                   <option key={index} value={ficha}>
@@ -158,7 +159,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
       <div>
         <label className='formLabel'>
           Estado:
-          <select value={estado} className="roleSelectDiv" onChange={handleEstadoChange}>
+          <select value={estado} className="formInputName" onChange={handleEstadoChange}>
             <option value="prevista">Prevista</option>
             <option value="realizada">Realizada</option>
           </select>
@@ -175,7 +176,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
             value={formData.ahorroEnergia}
             onChange={handleInputChange}
             min="0"
-            className="formInputNumber"
+            className="formInputName"
             required
           />
         </label>
@@ -190,14 +191,14 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
             id="contraprestacion"
             value={formData.contraprestacion}
             onChange={handleInputChange}
-            min="0.05"
-            max="1.00"
-            step="0.01"
-            className="formInputNumber"
+            min="0"
+            max="200"
+            step="1"
+            className="formInputName"
             required
           />
         </label>
-        <p>Total: {ahorroTotal.toFixed(2)} €</p>
+        <p className="ahorroTotal" >Total: {ahorroTotal.toFixed(2)} €</p>
       </div>
       <br />
     </>
