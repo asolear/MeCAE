@@ -9,15 +9,16 @@ import { toast } from "react-toastify";
 import CreateListingActuacion from "./CreateListingActuacion";
 
 const CreateListing = () => {
+
+
+
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
-        ahorroEnergia: 0,
-        contraprestacion: 0.10, // Valor por defecto para la contraprestación
-        estado: "prevista", // Estado por defecto
-        titulo: '',
-        tipo: 'Estándar', // Tipo por defecto
-        userRef: '', // Para almacenar la referencia del usuario autenticado
+
     });
+
+    // const { type, name } = formData;
+    const { name } = formData;
 
     const auth = getAuth();
     const navigate = useNavigate();
@@ -27,11 +28,11 @@ const CreateListing = () => {
         if (isMounted) {
             onAuthStateChanged(auth, (user) => {
                 if (user) {
-                    setFormData({ ...formData, userRef: user.uid });
+                    setFormData({ ...formData, userRef: user.uid })
                 } else {
-                    navigate('sign-in');
+                    navigate('sign-in')
                 }
-            });
+            })
         }
         return () => {
             isMounted.current = false;
@@ -45,36 +46,47 @@ const CreateListing = () => {
 
         const formDataCopy = {
             ...formData,
-            timestamp: serverTimestamp(), // Agregar la marca de tiempo
+            timestamp: serverTimestamp(),
         };
 
         try {
             const docRef = await addDoc(collection(db, 'listings'), formDataCopy);
             setLoading(false);
             toast.success('Listing saved');
-            navigate(`/category/${formDataCopy.tipo}/${docRef.id}`); // Redirigir a la página del listado creado
+            navigate(`/category/${formDataCopy.type}/${docRef.id}`);
         } catch (error) {
             setLoading(false);
-            toast.error('Failed to create listing'); // Mensaje de error
+            toast.error('Failed to create listing');
         }
     };
 
-    const onFormDataChange = (data) => {
-        setFormData((prevData) => ({
-            ...prevData,
-            ...data, // Actualiza los datos del formulario con los nuevos valores
-        }));
+    const onMutate = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.id]: e.target.value,
+        });
     };
 
     if (loading) {
-        return <Spinner />; // Mostrar el spinner mientras se está guardando el formulario
+        return <Spinner />;
     }
+
+
+    const onSelectChange = (e) => {
+        setFormData({
+            ...formData,
+            type: e.target.value, // Actualiza el tipo seleccionado
+        });
+    };
 
     return (
         <div className="profile">
+
+
             <main>
+
                 <form onSubmit={onSubmit}>
-                    <CreateListingActuacion onFormDataChange={onFormDataChange} />
+                    <CreateListingActuacion />
                     <button type='submit' className='primaryButton createListingButton'>
                         Ofertar
                     </button>

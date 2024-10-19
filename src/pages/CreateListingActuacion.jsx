@@ -1,65 +1,77 @@
 import React, { useState, useEffect } from "react";
 import data from "../data/data"; // Importa los datos desde el archivo data.js
 
-const Formulario = ({ onSectorChange, onFichaChange }) => {
-  const [tipo, setTipo] = useState("Estándar"); // Tipo inicial como "Estándar"
+const CreateListingActuacion = ({ onFormDataChange }) => {
+  const [tipo, setTipo] = useState("Estándar");
   const [sectores, setSectores] = useState([]);
   const [fichas, setFichas] = useState([]);
   const [selectedSector, setSelectedSector] = useState("");
   const [selectedFicha, setSelectedFicha] = useState("");
+  const [estado, setEstado] = useState("prevista");
   const [formData, setFormData] = useState({
     titulo: '',
+    ahorroEnergia: 0,
+    contraprestacion: 0.10, // Valor por defecto (ejemplo 0.10 €/kWh)
   });
 
   useEffect(() => {
-    // Obtener los sectores únicos desde los datos
     const uniqueSectors = [...new Set(data.map(item => item["SECTOR"]))];
     setSectores(uniqueSectors);
-    // Seleccionar el primer sector automáticamente si hay sectores
     if (uniqueSectors.length > 0) {
       setSelectedSector(uniqueSectors[0]);
     }
   }, []);
 
-  // Actualizar los fichas cuando se selecciona un sector
   useEffect(() => {
     if (selectedSector) {
       const filteredElements = data
         .filter(item => item["SECTOR"] === selectedSector)
         .map(item => item["FICHA"]);
       setFichas(filteredElements);
-      // Seleccionar la primera ficha automáticamente si hay fichas
       if (filteredElements.length > 0) {
         setSelectedFicha(filteredElements[0]);
       }
     } else {
-      setFichas([]); // Limpiar los fichas si no hay sector seleccionado
+      setFichas([]);
     }
   }, [selectedSector]);
+
+  useEffect(() => {
+    if (selectedFicha) {
+      const fichaParts = selectedFicha.split(":");
+      const titulo = fichaParts.length > 1 ? fichaParts[1].trim() : selectedFicha;
+      setFormData(prevState => ({
+        ...prevState,
+        titulo: titulo
+      }));
+      // Notifica el cambio de los datos del formulario al componente principal
+      onFormDataChange({ ...formData, titulo });
+    }
+  }, [selectedFicha]);
 
   const handleTipoChange = (e) => {
     const newTipo = e.target.value;
     setTipo(newTipo);
-    // Resetear selectores si se cambia de Estándar a Singular
+    onFormDataChange({ ...formData, tipo: newTipo });
     if (newTipo !== "Estándar") {
       setSelectedSector("");
       setSelectedFicha("");
     } else if (sectores.length > 0) {
-      setSelectedSector(sectores[0]); // Restablecer al primer sector si vuelve a Estándar
+      setSelectedSector(sectores[0]);
     }
   };
 
   const handleSectorChange = (e) => {
     const newSector = e.target.value;
     setSelectedSector(newSector);
-    setSelectedFicha(""); // Resetear el selector de fichas cuando cambia el sector
-    onSectorChange && onSectorChange(newSector); // Emitir evento al padre si se pasa la función
+    setSelectedFicha("");
+    onFormDataChange({ ...formData, selectedSector: newSector });
   };
 
   const handleFichaChange = (e) => {
     const newFicha = e.target.value;
     setSelectedFicha(newFicha);
-    onFichaChange && onFichaChange(newFicha); // Emitir evento al padre si se pasa la función
+    onFormDataChange({ ...formData, selectedFicha: newFicha });
   };
 
   const handleInputChange = (e) => {
@@ -68,7 +80,16 @@ const Formulario = ({ onSectorChange, onFichaChange }) => {
       ...prevState,
       [id]: value
     }));
+    onFormDataChange({ ...formData, [id]: value });
   };
+
+  const handleEstadoChange = (e) => {
+    const newEstado = e.target.value;
+    setEstado(newEstado);
+    onFormDataChange({ ...formData, estado: newEstado });
+  };
+
+  const ahorroTotal = formData.ahorroEnergia * formData.contraprestacion;
 
   return (
     <>
@@ -84,13 +105,13 @@ const Formulario = ({ onSectorChange, onFichaChange }) => {
       </div>
       <br />
 
-      {/* Mostrar los selectores de sector y ficha solo si es "Estándar" */}
       {tipo === "Estándar" && (
         <>
           <div>
             <label className='formLabel'>
               Sector:
-              <select value={selectedSector}
+              <select
+                value={selectedSector}
                 className="roleSelectDiv"
                 onChange={handleSectorChange}>
                 {sectores.map((sector, index) => (
@@ -105,8 +126,8 @@ const Formulario = ({ onSectorChange, onFichaChange }) => {
           <div>
             <label className='formLabel'>
               Ficha:
-              fsadf
-              <select value={selectedFicha}
+              <select
+                value={selectedFicha}
                 className="roleSelectDiv"
                 onChange={handleFichaChange} disabled={!selectedSector}>
                 {fichas.map((ficha, index) => (
@@ -132,8 +153,55 @@ const Formulario = ({ onSectorChange, onFichaChange }) => {
         minLength='0'
         required
       />
+      <br />
+
+      <div>
+        <label className='formLabel'>
+          Estado:
+          <select value={estado} className="roleSelectDiv" onChange={handleEstadoChange}>
+            <option value="prevista">Prevista</option>
+            <option value="realizada">Realizada</option>
+          </select>
+        </label>
+      </div>
+      <br />
+
+      <div>
+        <label className='formLabel'>
+          Ahorro de energía (kWh):
+          <input
+            type="number"
+            id="ahorroEnergia"
+            value={formData.ahorroEnergia}
+            onChange={handleInputChange}
+            min="0"
+            className="formInputNumber"
+            required
+          />
+        </label>
+      </div>
+      <br />
+
+      <div>
+        <label className='formLabel'>
+          Contraprestación (€/kWh):
+          <input
+            type="number"
+            id="contraprestacion"
+            value={formData.contraprestacion}
+            onChange={handleInputChange}
+            min="0.05"
+            max="1.00"
+            step="0.01"
+            className="formInputNumber"
+            required
+          />
+        </label>
+        <p>Total: {ahorroTotal.toFixed(2)} €</p>
+      </div>
+      <br />
     </>
   );
 };
 
-export default Formulario;
+export default CreateListingActuacion;
