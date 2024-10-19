@@ -40,7 +40,7 @@ button {
     width: 100%;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    padding: 0 1rem;
+    padding: 0 3rem;
     font-size: 1rem;
 }
 
@@ -130,7 +130,7 @@ button {
     justify-content: center;
     align-items: center;
 }
-
+1c597c
 .loadingSpinner {
     width: 64px;
     height: 64px;
@@ -823,7 +823,7 @@ button {
 
 .formLabel {
     font-weight: 600;
-    margin-top: .1rem;
+    margin-top: 1rem;
     display: block;
 }
 
