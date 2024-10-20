@@ -97,7 +97,7 @@ const SignUp = () => {
                     <div className="signUpBar">
                         <p className="signUpText">Sign Up</p>
                         <button className="signUpButton">
-                            <ArrowRightIcon fill="#ffffff" width='34px' height='34px' />
+                            <ArrowRightIcon  style={{ color: 'white', fontSize: '48px' }} fill="#ffffff" width='34px' height='34px' />
                         </button>
                     </div>
                 </form>

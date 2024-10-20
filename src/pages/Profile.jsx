@@ -160,11 +160,11 @@ const Profile = () => {
         {role !== "comprador" && (
           <Link to="/user/create-listing" className="primaryButton">
             <p>Oferta tu ahorro de energía</p>
-            <ArrowRightIcon />
+            <ArrowRightIcon  style={{ color: 'white', fontSize: '48px' }} />
           </Link>
         )}
 
-        {role == "comprador" && (
+        {role === "comprador" && (
 
           <>
             <p className="listingText">Your Listingsss</p>

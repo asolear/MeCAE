@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-import OAuth from "../components/OAuth"
+// import OAuth from "../components/OAuth"
 import ArrowRightIcon from '@mui/icons-material/Forward';
 
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
@@ -78,7 +78,7 @@ const SignIn = () => {
 
                     <div className="signInBar">
                         <button className="signInButton">
-                            <ArrowRightIcon fill="#ffffff" width='34px' height='34px' />
+                            <ArrowRightIcon  style={{ color: 'white', fontSize: '48px' }} fill="#ffffff" width='34px' height='34px' />
                         </button>
                     </div>
 
