@@ -1,6 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import PersonIcon from '@mui/icons-material/Person';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+// import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,14 +18,19 @@ const Navbar = () => {
         style={{ cursor: "pointer" }}
         onClick={() => navigate("/")}
       >
-        <span style={{
-          color: "#ffffff",
-          fontSize: "72px",  // Ajusta el tamaño de la fuente
-          transform: "scale(.2, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-          display: "inline-block",  // Necesario para que el span respete el transform
-        }}>
-          MeCAE
-        </span>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* <CurrencyExchangeOutlinedIcon style={{ fontSize: '72px', marginRight: '0px', margin: '0 0px' }} /> */}
+
+          <span style={{
+            color: "#ffffff",
+            fontSize: "72px",  // Ajusta el tamaño de la fuente
+            transform: "scale(.2, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
+            display: "inline-block",  // Necesario para que el span respete el transform
+          }}>
+
+            MeCAE
+
+          </span></div>
       </nav>
       <nav className="navbarNav">
         <ul className="navbarListItems">
