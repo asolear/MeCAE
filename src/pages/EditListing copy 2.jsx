@@ -7,8 +7,6 @@ import { v4 as uuidv4 } from 'uuid'
 import { useNavigate, useParams } from "react-router-dom"
 import Spinner from "../components/Spinner"
 import { toast } from "react-toastify"
-import CreateListingActuacion from "./CreateListingActuacion";
-
 
 const EditListing = () => {
     const geocodingAPIKey = process.env.REACT_APP_GEOCODING_API_KEY
@@ -114,16 +112,11 @@ const EditListing = () => {
             }))
         }
     }
-    const onFormDataChange = (data) => {
-        setFormData((prevData) => ({
-            ...prevData,
-            ...data, // Actualiza los datos del formulario con los nuevos valores
-        }));
-    };
 
     if (loading) {
-        return <Spinner />; // Mostrar el spinner mientras se está guardando el formulario
+        return <Spinner />
     }
+
     return (
         <div className="profile">
             <header>
@@ -132,8 +125,35 @@ const EditListing = () => {
 
             <main>
                 <form onSubmit={onSubmit}>
+                    <label className="formLabel">Venta / Renta</label>
+                    <div className="formButtons">
+                        <button type="button"
+                            className={type === 'sale' ? 'formButtonActive' : 'formButton'}
+                            id='type'
+                            value='sale'
+                            onClick={onMutate}>
+                            Venta
+                        </button>
+                        <button type="button"
+                            className={type === 'rent' ? 'formButtonActive' : 'formButton'}
+                            id='type'
+                            value='rent'
+                            onClick={onMutate}>
+                            Renta
+                        </button>
+                    </div>
 
-                <CreateListingActuacion onFormDataChange={onFormDataChange} />
+                    <label className='formLabel'>Nombre</label>
+                    <input
+                        className='formInputName'
+                        type='text'
+                        id='name'
+                        value={name}
+                        onChange={onMutate}
+                        maxLength='32'
+                        minLength='0'
+                        required
+                    />
 
                     <button type='submit' className='primaryButton createListingButton'>
                         Guardar Cambios

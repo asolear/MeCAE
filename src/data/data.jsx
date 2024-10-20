@@ -580,7 +580,7 @@ const data =[
        CARPETA:"CAES"
     },
     {
-       FICHA:"TER 190: Reformado de aparatos de refrigeración para alimentos y bebidas de venta directa",
+       FICHA:"TER190: Reformado de aparatos de refrigeración para alimentos y bebidas de venta directa",
        CODIGO:"TER190",
        VERSION:"V1.1",
        SECTOR:"Terciario",
@@ -1100,20 +1100,50 @@ const data =[
        CARPETA:"CAES"
     },
     {
-       FICHA:"SOL060: DECLARACIÓN RESPONSABLE relativa a la estimación de que el consumo anual de energía por parte del consumidor o consumidores asociados a la instalación sea igual o mayor al 80 % de la energía anual generada por la instalación",
-       CODIGO:"SOL060",
+       FICHA:"AGR000: SINGULAR",
+       CODIGO:"SOL070",
        VERSION:null,
-       SECTOR:"NG",
-       PAGI:6,
-       PAGF:8,
+       SECTOR:"Agrario",
+       PAGI:8,
+       PAGF:9,
        FORMULARIO:"Modelos de informe Real Decreto 477|2021/2022_02_08-Informe_80__Consumo_RD477.pdf",
        CARPETA:"FV"
     },
     {
-       FICHA:"SOL070: INFORME JUSTIFICATIVO de la previsión de que el consumo anual de energía por parte del consumidor o consumidores asociados a la instalación sea igual o mayor al 80 % de la energía anual generada por la instalación objeto de la ayuda.",
+       FICHA:"IND000: SINGULAR",
        CODIGO:"SOL070",
        VERSION:null,
-       SECTOR:"NG",
+       SECTOR:"Industrial",
+       PAGI:8,
+       PAGF:9,
+       FORMULARIO:"Modelos de informe Real Decreto 477|2021/2022_02_08-Informe_80__Consumo_RD477.pdf",
+       CARPETA:"FV"
+    },
+    {
+       FICHA:"RES000: SINGULAR",
+       CODIGO:"SOL070",
+       VERSION:null,
+       SECTOR:"Residencial",
+       PAGI:8,
+       PAGF:9,
+       FORMULARIO:"Modelos de informe Real Decreto 477|2021/2022_02_08-Informe_80__Consumo_RD477.pdf",
+       CARPETA:"FV"
+    },
+    {
+       FICHA:"TER000: SINGULAR",
+       CODIGO:"SOL070",
+       VERSION:null,
+       SECTOR:"Terciario",
+       PAGI:8,
+       PAGF:9,
+       FORMULARIO:"Modelos de informe Real Decreto 477|2021/2022_02_08-Informe_80__Consumo_RD477.pdf",
+       CARPETA:"FV"
+    },
+    {
+       FICHA:"TRA000: SINGULAR",
+       CODIGO:"SOL070",
+       VERSION:null,
+       SECTOR:"Transporte",
        PAGI:8,
        PAGF:9,
        FORMULARIO:"Modelos de informe Real Decreto 477|2021/2022_02_08-Informe_80__Consumo_RD477.pdf",

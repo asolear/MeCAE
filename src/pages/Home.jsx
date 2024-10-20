@@ -15,7 +15,6 @@ const Explore = () => {
                     }}>
                     Mercado de Ahorros Energéticos.
                 </p>
-
                 <p
                     style={{
 
@@ -38,12 +37,7 @@ const Explore = () => {
                     }}>
                     Plataforma de Intermediación.
                 </p>
-
-
             </header>
-
-
-
         </div>
     )
 }

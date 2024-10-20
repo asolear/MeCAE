@@ -95,7 +95,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
   return (
     <>
       <p className="pageHeader">Actuación</p>
-      <div>
+      {/* <div>
         <label className='formLabel'>
           Tipo:
           <select value={tipo} className="formInputName" onChange={handleTipoChange}>
@@ -104,7 +104,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
           </select>
         </label>
       </div>
-      <br />
+      <br /> */}
 
       {tipo === "Estándar" && (
         <>
@@ -115,7 +115,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
                 value={selectedSector}
                 className="formInputName"
                 onChange={handleSectorChange}>
-                {sectores.map((sector, index) => (
+                {sectores.sort().map((sector, index) => (
                   <option key={index} value={sector}>
                     {sector}
                   </option>
@@ -131,7 +131,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
                 value={selectedFicha}
                 className="formInputName"
                 onChange={handleFichaChange} disabled={!selectedSector}>
-                {fichas.map((ficha, index) => (
+                {fichas.sort().map((ficha, index) => (
                   <option key={index} value={ficha}>
                     {ficha}
                   </option>
@@ -143,7 +143,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
         </>
       )}
 
-      <label className='formLabel'>Título descriptivo de la actuación</label>
+      {/* <label className='formLabel'>Título descriptivo de la actuación</label>
       <input
         className='formInputName'
         type='text'
@@ -154,7 +154,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
         minLength='0'
         required
       />
-      <br />
+      <br /> */}
 
       <div>
         <label className='formLabel'>
