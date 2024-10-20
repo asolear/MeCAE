@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 import { getDoc, doc } from "firebase/firestore"
 import { getAuth } from "firebase/auth"
 import { db } from "../firebase.config"
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
+// import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Spinner from "../components/Spinner"
-import shareIcon from '../assets/svg/shareIcon.svg'
+import ShareIcon from '@mui/icons-material/Share';
 
 const Listing = () => {
     const [listing, setListing] = useState(null)
@@ -69,14 +69,14 @@ const Listing = () => {
                 </div>
             )}
 
-            <div className="shareIconDiv" onClick={() => {
+            <div className="ShareIconDiv" onClick={() => {
                 navigator.clipboard.writeText(window.location.href)
                 setShareLinkCopied(true)
                 setTimeout(() => {
                     setShareLinkCopied(false)
                 }, 1500)
             }}>
-                <img src={shareIcon} alt="share" />
+                <ShareIcon />
             </div>
 
             {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}

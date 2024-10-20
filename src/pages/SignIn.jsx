@@ -5,9 +5,8 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 // import OAuth from "../components/OAuth"
 import ArrowRightIcon from '@mui/icons-material/Forward';
 
-import visibilityIcon from '../assets/svg/visibilityIcon.svg'
-import visibilityOffIcon from '../assets/svg/visibilityOffIcon.svg'
-
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
@@ -69,16 +68,15 @@ const SignIn = () => {
                             value={password}
                             onChange={onChange} />
 
-                        <img src={showPassword ? visibilityIcon : visibilityOffIcon}
-                            alt="show password"
-                            className="showPassword"
-                            onClick={() => setShowPassword((prevState) => !prevState)}
-                        />
+                        {/* Mostrar el icono condicionalmente */}
+                        <span onClick={() => setShowPassword((prevState) => !prevState)} className="showPassword">
+                            {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />} {/* Cambia entre los iconos */}
+                        </span>
                     </div>
 
                     <div className="signInBar">
                         <button className="signInButton">
-                            <ArrowRightIcon  style={{ color: 'white', fontSize: '48px' }} fill="#ffffff" width='34px' height='34px' />
+                            <ArrowRightIcon style={{ color: 'white', fontSize: '48px' }} fill="#ffffff" width='34px' height='34px' />
                         </button>
                     </div>
 
