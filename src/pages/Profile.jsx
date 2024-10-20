@@ -6,8 +6,8 @@ import { updateDoc, doc, collection, getDocs, query, where, orderBy, deleteDoc, 
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
 import Offers from "./Offers";
-import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
-import homeIcon from "../assets/svg/homeIcon.svg";
+
+import ArrowRightIcon from '@mui/icons-material/Forward';
 
 const Profile = () => {
   const auth = getAuth();
@@ -159,8 +159,8 @@ const Profile = () => {
         {/* Ocultar el enlace si el rol es 'comprador' */}
         {role !== "comprador" && (
           <Link to="/user/create-listing" className="primaryButton">
-            <p>Cede tu ahorro de energía a cambio de una contraprestación</p>
-            <img src={arrowRight} alt="arrow right" />
+            <p>Oferta tu ahorro de energía</p>
+            <ArrowRightIcon />
           </Link>
         )}
 
@@ -176,7 +176,7 @@ const Profile = () => {
 
         {!loading && listings?.length > 0 && (
           <>
-            <p className="listingText">Your Listings</p>
+            <p className="listingText">Tus ofertas</p>
             <ul className="listingsList">
               {listings.map((listing) => (
                 <ListingItem

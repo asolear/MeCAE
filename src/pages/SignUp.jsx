@@ -5,7 +5,8 @@ import { getAuth, createUserWithEmailAndPassword, updateProfile, signOut, sendPa
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import OAuth from "../components/OAuth"
-import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
+import ArrowRightIcon from '@mui/icons-material/Forward';
+
 
 const SignUp = () => {
     const [formData, setFormData] = useState({

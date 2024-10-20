@@ -71,7 +71,7 @@ button {
     font-weight: 600;
     font-size: 1.25rem;
     width: 80%;
-    margin: 20 auto;
+    margin: 40px auto 20px auto; /* Cambiado para mayor separación arriba */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,16 +265,13 @@ button {
 
 .roleSelectDiv {
     margin-bottom: 2rem;
-    background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
 }
 .nameInput {
     margin-bottom: 2rem;
-    background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
 }
 
 .emailInput {
     margin-bottom: 2rem;
-    background: url('./assets/svg/personIcon.svg') #ffffff 2.5% center no-repeat;
 }
 
 .passwordInputDiv {

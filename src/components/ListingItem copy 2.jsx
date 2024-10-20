@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
+import { ReactComponent as DeleteIcon } from '../assets/svg/deleteIcon.svg';
+import { ReactComponent as EditIcon } from '../assets/svg/editIcon.svg';
+
 const ListingItem = ({ listing, id, onEdit, onDelete }) => {
     return (
         <li className="categoryListing">
