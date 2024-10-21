@@ -96,8 +96,8 @@ const SignUp = () => {
                 <div>
                     <select className="roleSelectDiv" id="role" value={role} onChange={onChange}>
                         <option value="cedente">Propietario del ahorro energético</option>
-                        <option value="obligado">Sujetos obligado</option>
-                        <option value="delegado">Sujetos delegado</option>
+                        <option value="obligado">Sujeto obligado</option>
+                        <option value="delegado">Sujeto delegado</option>
                     </select>
                 </div>
 

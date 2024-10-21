@@ -101,15 +101,6 @@ const Offers = () => {
                 <Spinner />
             ) : listings && listings.length > 0 ? (
                 <>
-            {/* Cabeceras solo una vez */}
-            <div className="categoryListingHeaders">
-                <p>Nombre</p>
-                <p>Título</p>
-                <p>Estado</p>
-                <p>Contraprestación</p>
-            </div>
-
-
                     <main>
                         <ul className="categoryListings">
                             {listings.map((listing) => (
