@@ -11,12 +11,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Spinner from "../components/Spinner"
-import ShareIcon from '@mui/icons-material/Share';
-
 const Listing = () => {
     const [listing, setListing] = useState(null)
     const [loading, setLoading] = useState(true)
-    const [shareLinkCopied, setShareLinkCopied] = useState(false)
 
     const navigate = useNavigate()
     const params = useParams()
@@ -69,45 +66,17 @@ const Listing = () => {
                 </div>
             )}
 
-            <div className="ShareIconDiv" onClick={() => {
-                navigator.clipboard.writeText(window.location.href)
-                setShareLinkCopied(true)
-                setTimeout(() => {
-                    setShareLinkCopied(false)
-                }, 1500)
-            }}>
-                <ShareIcon />
-            </div>
 
-            {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
+
 
             <div className="listingDetails">
-                <p className="listingName">
-                    {listing.name} - $
-                    {listing.offer ?
-                        listing.discountedPrice?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        : listing.regularPrice?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                </p>
-
-                <p className="listingLocation">{listing.location}</p>
-                <p className="listingType">
-                    For {listing.type === 'rent' ? 'Rent' : 'Sale'}
-                </p>
-                {listing.offer && (
-                    <p className="discountPrice">
-                        ${listing.regularPrice - listing.discountedPrice} Discount
-                    </p>
-                )}
-
                 <ul className="listingDetailsList">
-                    <li>
-                        {listing.bedrooms} {listing.bedrooms > 1 ? 'Bedrooms' : 'Bedroom'}
-                    </li>
-                    <li>
-                        {listing.bathrooms} {listing.bathrooms > 1 ? 'Bathrooms' : 'Bathroom'}
-                    </li>
-                    <li>{listing.parking && 'Parking Spot'}</li>
-                    <li>{listing.furnished && 'Furnished'}</li>
+                    <div className="categoryListingRow">
+                        <p>{listing.tipo}</p>
+                        <p>{listing.ahorroEnergia}</p>
+                        <p>{listing.estado}</p>
+                        <p>{listing.contraprestacion}</p>
+                    </div>
                 </ul>
 
 
@@ -115,7 +84,7 @@ const Listing = () => {
                     <Link
                         to={`/contact/${listing.userRef}?listingName=${listing.name}`}
                         className='primaryButton'>
-                        Contact Landlord
+                        Contactar al propietario de los ahorros energéticos
                     </Link>
                 )}
             </div>
