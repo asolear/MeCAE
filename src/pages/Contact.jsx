@@ -5,7 +5,7 @@ import { db } from "../firebase.config"
 import { toast } from "react-toastify"
 
 const Contact = () => {
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState('fdasdfasd ')
     const [landlord, setLandlord] = useState(null)
     // eslint-disable-next-line
     const [searchParams, setSearchParams] = useSearchParams()
@@ -50,6 +50,8 @@ const Contact = () => {
                                 name="message"
                                 id="message"
                                 value={message}
+                                placeholder="Documento de identificación (DNI/NIE)"
+
                                 onChange={onChange}
                             ></textarea>
                         </div>
