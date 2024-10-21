@@ -16,6 +16,7 @@ import Listing from './pages/Listing';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
+import Ayuda from './pages/Ayuda';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CookieConsent from './components/CookieConsent'; // Asegúrate de que la ruta sea correcta
@@ -27,6 +28,7 @@ function App() {
                 <Routes>
                     <Route path='/MeCAE' element={<Explore />} />
                     <Route path='/' element={<Home />} />
+                    <Route path='/ayuda' element={<Ayuda />} />
                     <Route path='/offers' element={<Offers />} />
                     <Route path='/category/:categoryName' element={<Category />} />
                     <Route path='/user' element={<PrivateRoute redirectTo="/sign-in" />}>

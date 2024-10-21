@@ -27,7 +27,6 @@ const Navbar = () => {
             transform: "scale(.2, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
             display: "inline-block",  // Necesario para que el span respete el transform
           }}>
-
             MeCAE
 
           </span></div>
@@ -35,11 +34,13 @@ const Navbar = () => {
       <nav className="navbarNav">
         <ul className="navbarListItems">
 
-          {/* <li className="navbarListItem" onClick={() => navigate("/offers")}>
-            <OfferIcon
-              fill={pathMatchRoute("/offers") ? "#ffffff" : "#8f8f8f"}
-              width="36px"
-              height="36px"
+          <li className="navbarListItem" onClick={() => navigate("/offers")}>
+            <PersonIcon
+              className={
+                pathMatchRoute("/offers")
+                  ? "navbarListItemNameActive"
+                  : "navbarListItemName"
+              }
             />
             <p
               className={
@@ -50,13 +51,17 @@ const Navbar = () => {
             >
               Ofertas
             </p>
-          </li> */}
+          </li>
 
 
 
           <li
             className="navbarListItem" onClick={() => navigate("/user/profile")}>
-            <PersonIcon style={{ color: 'white', fontSize: '48px' }}
+            <PersonIcon className={
+                pathMatchRoute("/user/profile")
+                  ? "navbarListItemNameActive"
+                  : "navbarListItemName"
+              }
             />
             <p
               className={
@@ -69,12 +74,16 @@ const Navbar = () => {
             </p>
           </li>
 
-          <li className="navbarListItem" onClick={() => navigate("/")}>
-            <QuestionMarkIcon style={{ color: 'white', fontSize: '48px' }}
+          <li className="navbarListItem" onClick={() => navigate("/Ayuda")}>
+            <QuestionMarkIcon className={
+                pathMatchRoute("/Ayuda")
+                  ? "navbarListItemNameActive"
+                  : "navbarListItemName"
+              }
             />
             <p
               className={
-                pathMatchRoute("/")
+                pathMatchRoute("/Ayuda")
                   ? "navbarListItemNameActive"
                   : "navbarListItemName"
               }

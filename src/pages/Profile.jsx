@@ -157,7 +157,7 @@ const Profile = () => {
         </div>
 
         {/* Ocultar el enlace si el rol es 'comprador' */}
-        {role !== "comprador" && (
+        {role !== "delegado" && role !== "obligado" && (
           <Link to="/user/create-listing" className="primaryButton">
             <p>Oferta tu ahorro de energía</p>
             <ArrowRightIcon  style={{ color: 'white', fontSize: '48px' }} />
