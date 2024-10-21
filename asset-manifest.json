@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.d8829d6b.css",
-    "main.js": "/static/js/main.0174838d.js",
+    "main.css": "/static/css/main.3729e7e8.css",
+    "main.js": "/static/js/main.9815bd5b.js",
     "static/media/industrial.jpeg": "/static/media/industrial.9b61b835b0119fc01117.jpeg",
     "static/media/transporte.jpeg": "/static/media/transporte.b02218adf49bb58eb4bd.jpeg",
     "index.html": "/index.html",
-    "main.d8829d6b.css.map": "/static/css/main.d8829d6b.css.map",
-    "main.0174838d.js.map": "/static/js/main.0174838d.js.map"
+    "main.3729e7e8.css.map": "/static/css/main.3729e7e8.css.map",
+    "main.9815bd5b.js.map": "/static/js/main.9815bd5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8829d6b.css",
-    "static/js/main.0174838d.js"
+    "static/css/main.3729e7e8.css",
+    "static/js/main.9815bd5b.js"
   ]
 }
