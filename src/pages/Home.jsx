@@ -1,45 +1,26 @@
+import StockChart from '../props/StockChart';
 
 const Explore = () => {
     return (
-        <div className="explore">
-
-            <header >
-
-                <p
-                    style={{
-                        // color: "#ffffff",
-                        fontSize: "42px",  // Ajusta el tamaño de la fuente
-                        // transform: "scale(.9, .5)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-                        // display: "inline-block",  // Necesario para que el span respete el transform
-                        textAlign: "center",
-                    }}>
+        <div className="explore" style={{ textAlign: 'center', paddingBottom: '20px' }}>
+            <header>
+                <p style={{ fontSize: "42px", textAlign: "center" }}>
                     Mercado de Ahorros Energéticos.
                 </p>
-                <p
-                    style={{
-
-
-                        // color: "#ffffff",
-                        fontSize: "12px",  // Ajusta el tamaño de la fuente
-                        // transform: "scale(1.0, 1)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-                        // display: "inline-block",  // Necesario para que el span respete el transform
-                        textAlign: "center",
-                    }}>
+                <p style={{ fontSize: "12px", textAlign: "center" }}>
                     Sistema de Certificados de Ahorro Energético (CAE)
                 </p>
-                <p
-                    style={{
-                        // color: "#ffffff",
-                        // fontSize: "72px",  // Ajusta el tamaño de la fuente
-                        // transform: "scale(.9, .4)",  // Escala horizontalmente en 1 y aplasta verticalmente a la mitad
-                        // display: "inline-block",  // Necesario para que el span respete el transform
-                        textAlign: "center",
-                    }}>
+                <p style={{ textAlign: "center" }}>
                     Plataforma de Intermediación.
                 </p>
             </header>
+
+            {/* Aplicamos clases CSS para forzar el tamaño */}
+            <div className="stock-chart-container">
+                <StockChart />
+            </div>
         </div>
-    )
+    );
 }
 
-export default Explore
+export default Explore;

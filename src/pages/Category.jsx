@@ -116,7 +116,7 @@ const Category = () => {
                     <br />
                     <br />
                     {lastFetchedListing && (
-                        <p className="loadMore" onClick={onFetchMoreListings}>Load More</p>
+                        <p className="loadMore" onClick={onFetchMoreListings}>Mas</p>
                     )}
                 </>
             ) : (<p>No listings for {params.categoryName}.</p>)}

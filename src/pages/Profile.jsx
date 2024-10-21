@@ -114,6 +114,7 @@ const Profile = () => {
   const onEdit = (listingId) => navigate(`/user/edit-listing/${listingId}`);
 
   return (
+    <>
     <div className="profile">
       <header className="profileHeader">
         <p className="pageHeader">Usuario</p>
@@ -164,20 +165,22 @@ const Profile = () => {
           </Link>
         )}
 
-        {role === "comprador" && (
+        {(role === "delegado" || role === "obligado") && (
 
-          <>
-            <p className="listingText">Your Listingsss</p>
+          <div >
+            <p className="listingText">Ofertas</p>
             <ul className="listingsList">
               <Offers />
             </ul>
-          </>)}
+          </div>
+          
+        )}
 
 
         {!loading && listings?.length > 0 && (
           <>
             <p className="listingText">Tus ofertas</p>
-            <ul className="listingsList">
+            <ul className="categoryListings">
               {listings.map((listing) => (
                 <ListingItem
                   key={listing.id}
@@ -192,6 +195,7 @@ const Profile = () => {
         )}
       </main>
     </div>
+    </>
   );
 };
 
