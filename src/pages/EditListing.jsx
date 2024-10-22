@@ -84,7 +84,7 @@ const EditListing = () => {
         await updateDoc(docRef, formDataCopy).catch(() => toast.error('Error al actualizar el listado.'))
         setLoading(false)
         toast.success('Listado actualizado.')
-        navigate(`/category/${formDataCopy.type}/${docRef.id}`)
+        navigate(`/user/profile`)
     }
 
     const onMutate = (e) => {

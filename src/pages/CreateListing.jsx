@@ -52,7 +52,7 @@ const CreateListing = () => {
             const docRef = await addDoc(collection(db, 'listings'), formDataCopy);
             setLoading(false);
             toast.success('Listing saved');
-            navigate(`/category/${formDataCopy.tipo}/${docRef.id}`); // Redirigir a la página del listado creado
+            navigate(`/user/profile`); // Redirigir a la página del listado creado
         } catch (error) {
             setLoading(false);
             toast.error('Failed to create listing'); // Mensaje de error
