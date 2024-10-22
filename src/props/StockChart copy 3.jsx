@@ -10,21 +10,19 @@ const ValueInput = () => {
     datasets: [
       {
         type: 'line',
-        label: 'c€/kWh',
+        label: 'Media Ponderada de Contraprestación',
         data: [],
-        borderColor: 'green',
-        backgroundColor: 'lightgrey',
-        borderWidth: 8, // Duplicar grosor de la línea
-
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
         yAxisID: 'y1',
         fill: false,
       },
       {
         type: 'bar',
-        label: 'kWh',
+        label: 'Acumulado Diario de Ahorro de Energía',
         data: [],
-        borderColor: 'darkblue',
-        backgroundColor: 'lightgrey',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        backgroundColor: 'rgba(153, 102, 255, 0.5)',
         yAxisID: 'y2',
       },
     ],
@@ -91,19 +89,19 @@ const ValueInput = () => {
         datasets: [
           {
             type: 'line',
-            label: 'c€/kWh',
+            label: 'Media Ponderada de Contraprestación',
             data: unitCostDataArray,
-            borderColor: 'green',
-            backgroundColor: 'lightgrey',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
             yAxisID: 'y1',
             fill: false,
           },
           {
             type: 'bar',
-            label: 'kWh',
+            label: 'Acumulado Diario de Ahorro de Energía',
             data: quantityDataArray,
-            borderColor: 'darkblue',
-            backgroundColor: 'darkblue',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            backgroundColor: 'rgba(153, 102, 255, 0.5)',
             yAxisID: 'y2',
           },
         ],
@@ -118,14 +116,14 @@ const ValueInput = () => {
             position: 'left',
             title: {
               display: true,
-              text: 'c€/kWh',
-              color: 'green', // Color del título del eje Y
+              text: 'Media Ponderada de Contraprestación',
+              color: 'rgba(75, 192, 192, 1)', // Color del título del eje Y
             },
             ticks: {
-              color: 'green', // Color de las etiquetas del eje Y
+              color: 'rgba(75, 192, 192, 1)', // Color de las etiquetas del eje Y
             },
             grid: {
-              color: 'lightgrey', // Color de las líneas del eje Y
+              color: 'rgba(75, 192, 192, 0.2)', // Color de las líneas del eje Y
             },
           },
           y2: {
@@ -133,11 +131,11 @@ const ValueInput = () => {
             position: 'right',
             title: {
               display: true,
-              text: 'kWh',
-              color: 'darkblue', // Color del título del eje Y derecho
+              text: 'Acumulado Diario de Ahorro de Energía',
+              color: 'rgba(153, 102, 255, 1)', // Color del título del eje Y derecho
             },
             ticks: {
-              color: 'darkblue', // Color de las etiquetas del eje Y derecho
+              color: 'rgba(153, 102, 255, 1)', // Color de las etiquetas del eje Y derecho
             },
             grid: {
               drawOnChartArea: false, // Desactiva las líneas de grid del eje derecho
@@ -165,6 +163,7 @@ const ValueInput = () => {
 
   return (
     <div>
+      <h2>Gráfica con Media Ponderada y Acumulado Diario</h2>
       <div style={{ width: '100%', height: '300px' }}>
         <Line data={chartData} options={lineOptions} />
       </div>

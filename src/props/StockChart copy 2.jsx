@@ -1,31 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import { Line } from 'react-chartjs-2';
+import { Line, Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { Timestamp } from 'firebase/firestore';
 
 const ValueInput = () => {
-  const [chartData, setChartData] = useState({
+  const [unitCostData, setUnitCostData] = useState({
     labels: [],
     datasets: [
       {
-        type: 'line',
-        label: 'c€/kWh',
+        label: 'Media Ponderada de Contraprestación',
         data: [],
-        borderColor: 'green',
-        backgroundColor: 'lightgrey',
-        borderWidth: 8, // Duplicar grosor de la línea
-
-        yAxisID: 'y1',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
         fill: false,
       },
+    ],
+  });
+
+  const [quantityData, setQuantityData] = useState({
+    labels: [],
+    datasets: [
       {
-        type: 'bar',
-        label: 'kWh',
+        label: 'Acumulado Diario de Ahorro de Energía',
         data: [],
-        borderColor: 'darkblue',
-        backgroundColor: 'lightgrey',
-        yAxisID: 'y2',
+        backgroundColor: 'rgba(153, 102, 255, 0.5)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 1,
       },
     ],
   });
@@ -83,90 +84,80 @@ const ValueInput = () => {
         quantityDataArray.push(accumulatedQuantity);
       });
 
+      // Calcular el mínimo y máximo de la serie para la media ponderada
       const minUnitCost = Math.min(...unitCostDataArray);
       const maxUnitCost = Math.max(...unitCostDataArray);
 
-      setChartData({
+      setUnitCostData({
         labels: labels,
         datasets: [
           {
-            type: 'line',
-            label: 'c€/kWh',
+            label: 'Media Ponderada de Contraprestación',
             data: unitCostDataArray,
-            borderColor: 'green',
-            backgroundColor: 'lightgrey',
-            yAxisID: 'y1',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
             fill: false,
-          },
-          {
-            type: 'bar',
-            label: 'kWh',
-            data: quantityDataArray,
-            borderColor: 'darkblue',
-            backgroundColor: 'darkblue',
-            yAxisID: 'y2',
           },
         ],
       });
 
+      setQuantityData({
+        labels: labels,
+        datasets: [
+          {
+            label: 'Acumulado Diario de Ahorro de Energía',
+            data: quantityDataArray,
+            backgroundColor: 'rgba(153, 102, 255, 0.5)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1,
+          },
+        ],
+      });
+
+      // Configuración del eje Y con los límites mínimos y máximos
       setLineOptions({
         scales: {
-          y1: {
-            beginAtZero: false,
+          y: {
             min: minUnitCost,
             max: maxUnitCost,
-            position: 'left',
-            title: {
-              display: true,
-              text: 'c€/kWh',
-              color: 'green', // Color del título del eje Y
-            },
-            ticks: {
-              color: 'green', // Color de las etiquetas del eje Y
-            },
-            grid: {
-              color: 'lightgrey', // Color de las líneas del eje Y
-            },
-          },
-          y2: {
-            beginAtZero: true,
-            position: 'right',
-            title: {
-              display: true,
-              text: 'kWh',
-              color: 'darkblue', // Color del título del eje Y derecho
-            },
-            ticks: {
-              color: 'darkblue', // Color de las etiquetas del eje Y derecho
-            },
-            grid: {
-              drawOnChartArea: false, // Desactiva las líneas de grid del eje derecho
-            },
           },
         },
-        maintainAspectRatio: false,
       });
     };
 
     fetchData();
   }, []);
 
+  // Configuración para el gráfico de línea
   const [lineOptions, setLineOptions] = useState({
     scales: {
-      y1: {
-        beginAtZero: true,
-      },
-      y2: {
+      y: {
         beginAtZero: true,
       },
     },
-    maintainAspectRatio: false,
+    maintainAspectRatio: false, // Permitir el ajuste del tamaño personalizado
   });
+
+  // Configuración para el gráfico de barras
+  const barOptions = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+    maintainAspectRatio: false, // Permitir el ajuste del tamaño personalizado
+  };
 
   return (
     <div>
-      <div style={{ width: '100%', height: '300px' }}>
-        <Line data={chartData} options={lineOptions} />
+      <h2>Media Ponderada de Contraprestación por Día</h2>
+      <div style={{ width: '100%', height: '200px' }}>
+        <Line data={unitCostData} options={lineOptions} />
+      </div>
+
+      <h2>Acumulado Diario de Ahorro de Energía</h2>
+      <div style={{ width: '100%', height: '200px' }}>
+        <Bar data={quantityData} options={barOptions} />
       </div>
     </div>
   );
