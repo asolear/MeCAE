@@ -97,6 +97,12 @@ const Offers = () => {
                 </p>
             </header>
 
+
+
+
+
+
+
             {loading ? (
                 <Spinner />
             ) : listings && listings.length > 0 ? (

@@ -25,6 +25,8 @@ function App() {
     return (
         <>
             <Router>
+            <Navbar />
+
                 <Routes>
                     <Route path='/MeCAE' element={<Explore />} />
                     <Route path='/' element={<Home />} />
@@ -47,7 +49,6 @@ function App() {
                 <CookieConsent />
 
                 <Footer />
-                <Navbar />
             </Router>
             <ToastContainer autoClose={3000} />
         </>
