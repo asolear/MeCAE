@@ -33,7 +33,7 @@ const Footer = () => {
       <Button onClick={toggleAboutUs} sx={{ color: 'inherit' }}>Sobre MeCAE</Button>
       <Button onClick={toggleTermsOfUse} sx={{ color: 'inherit' }}>Términos de Uso</Button>
       <Button onClick={togglePrivacyPolicy} sx={{ color: 'inherit' }}>Política de Privacidad</Button>
-      <p>&copy; {footerYear} MeCAE</p>
+      <p>&copy; {footerYear} MeCAE. Mercado primario de ahorros energéticos</p>
 
       {/* Dialog for Terms of Use */}
       <Dialog open={openTermsOfUse} onClose={toggleTermsOfUse}>

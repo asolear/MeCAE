@@ -125,7 +125,7 @@ const Profile = () => {
   return (
     <Box sx={{ padding: 2 }}>
       <Typography variant="h4" gutterBottom>
-        Usuario
+      Tus Ahorros Energéticos
       </Typography>
 
 
@@ -134,7 +134,7 @@ const Profile = () => {
         {role !== "delegado" && role !== "obligado" && (
           <Link to="/user/create-listing">
             <Button variant="contained" color="primary" endIcon={<ArrowRightIcon />}>
-              Oferta tu ahorro de energía
+              Nueva oferta
             </Button>
           </Link>
         )}

@@ -8,6 +8,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import Spinner from "../components/Spinner"
 import { toast } from "react-toastify"
 import CreateListingActuacion from "./CreateListingActuacion";
+import { Box, Button, Typography } from '@mui/material';
 
 
 const EditListing = () => {
@@ -125,23 +126,26 @@ const EditListing = () => {
         return <Spinner />; // Mostrar el spinner mientras se está guardando el formulario
     }
     return (
-        <div className="profile">
-            <header>
-                <p className="pageHeader">Editar Listado</p>
-            </header>
-
+        <Box className="profile" sx={{ padding: 2 }}>
+            <Typography variant="h5" gutterBottom>
+                Editar Listado
+            </Typography>
             <main>
                 <form onSubmit={onSubmit}>
-
-                <CreateListingActuacion onFormDataChange={onFormDataChange} />
-
-                    <button type='submit' className='primaryButton createListingButton'>
+                    <CreateListingActuacion onFormDataChange={onFormDataChange} />
+                    <Button 
+                        type='submit' 
+                        variant='contained' 
+                        color='primary' 
+                        className='createListingButton' 
+                        sx={{ mt: 2 }} // Adds margin to the top for spacing
+                    >
                         Guardar Cambios
-                    </button>
+                    </Button>
                 </form>
             </main>
-        </div>
-    )
+        </Box>
+    );
 }
 
-export default EditListing
+export default EditListing;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import data from "../data/data"; // Importa los datos desde el archivo data.js
+import data from "../data/data"; // Import the data from data.js
 import { Box, Typography, FormControl, InputLabel, Select, MenuItem, TextField } from "@mui/material";
 
 const CreateListingActuacion = ({ onFormDataChange }) => {
@@ -12,7 +12,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
     const [formData, setFormData] = useState({
         titulo: '',
         ahorroEnergia: 220,
-        contraprestacion: 100, // Valor por defecto (ejemplo 0.10 €/kWh)
+        contraprestacion: 100, // Default value (example 0.10 €/kWh)
         holacaracola: 33,
     });
 
@@ -46,7 +46,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
                 ...prevState,
                 titulo: titulo
             }));
-            // Notifica el cambio de los datos del formulario al componente principal
+            // Notify the main component of the form data change
             onFormDataChange({ ...formData, titulo });
         }
     }, [selectedFicha]);
@@ -100,8 +100,8 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
             </Typography>
 
             <FormControl fullWidth sx={{ mb: 2 }}>
-                <InputLabel>Tipo</InputLabel>
-                <Select value={tipo} onChange={handleTipoChange}>
+                <InputLabel Id="tipo-label">Tipo</InputLabel>
+                <Select labelId="tipo-label" id="tipo" value={tipo} onChange={handleTipoChange} label="Tipo">
                     <MenuItem value="Estándar">Estándar</MenuItem>
                     <MenuItem value="Singular">Singular</MenuItem>
                 </Select>
@@ -111,7 +111,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
                 <>
                     <FormControl fullWidth sx={{ mb: 2 }}>
                         <InputLabel>Sector</InputLabel>
-                        <Select value={selectedSector} onChange={handleSectorChange}>
+                        <Select value={selectedSector} onChange={handleSectorChange} label="Sector">
                             {sectores.sort().map((sector, index) => (
                                 <MenuItem key={index} value={sector}>
                                     {sector}
@@ -122,7 +122,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
 
                     <FormControl fullWidth sx={{ mb: 2 }} disabled={!selectedSector}>
                         <InputLabel>Ficha</InputLabel>
-                        <Select value={selectedFicha} onChange={handleFichaChange}>
+                        <Select value={selectedFicha} onChange={handleFichaChange} label="Ficha">
                             {fichas.sort().map((ficha, index) => (
                                 <MenuItem key={index} value={ficha}>
                                     {ficha}
@@ -135,7 +135,7 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
 
             <FormControl fullWidth sx={{ mb: 2 }}>
                 <InputLabel>Estado</InputLabel>
-                <Select value={estado} onChange={handleEstadoChange}>
+                <Select value={estado} onChange={handleEstadoChange} label="Estado">
                     <MenuItem value="prevista">Prevista</MenuItem>
                     <MenuItem value="realizada">Realizada</MenuItem>
                 </Select>

@@ -40,16 +40,10 @@ const SignUp = () => {
     };
 
     const onChange = (e) => {
-        const { id, value, name } = e.target;
-
+        const { id, value } = e.target;
         setFormData((prevState) => ({
             ...prevState,
-            cedente: 'persona_fisica', // Reset cedente if role changes
-            empresa: '',
-            nif: '',
-            dni: '',
-            domicilio: '',
-            telefono: ''
+            [id]: value,
         }));
     };
 
@@ -88,13 +82,7 @@ const SignUp = () => {
             <Typography variant="h5" align="center">Registro</Typography>
             <FormControl fullWidth sx={{ mb: 2 }}>
                 <InputLabel id="role-label">Rol</InputLabel>
-                <Select
-                    labelId="role-label"
-                    name="role" // Use name for select components
-                    value={role}
-                    onChange={onChange}
-                    label="Rol"
-                >
+                <Select labelId="role-label" id="role" value={role} onChange={onChange} label="Rol">
                     <MenuItem value="cedente">Propietario del ahorro energético</MenuItem>
                     <MenuItem value="obligado">Sujeto obligado</MenuItem>
                     <MenuItem value="delegado">Sujeto delegado</MenuItem>
@@ -113,17 +101,11 @@ const SignUp = () => {
                         <TextField fullWidth type="email" label="Correo electrónico" id="email" value={email} onChange={onChange} sx={{ mb: 2 }} />
                     </>
                 )}
-
                 {role === 'cedente' && (
                     <>
                         <FormControl fullWidth sx={{ mb: 2 }}>
                             <InputLabel>Tipo de cedente</InputLabel>
-                            <Select
-                                name="cedente" // Use name for select components
-                                value={cedente}
-                                onChange={onChange}
-                                label="Tipo de cedente"
-                            >
+                            <Select labelId="cedente-label" id="cedente" value={cedente} onChange={onChange} label="Tipo de cedente">
                                 <MenuItem value="persona_juridica">Persona jurídica</MenuItem>
                                 <MenuItem value="persona_fisica">Persona física</MenuItem>
                                 <MenuItem value="comunidad_propietarios">Comunidad de propietarios</MenuItem>
