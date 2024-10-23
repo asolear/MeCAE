@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import PrivateRoute from './components/PrivateRoute';
 import Redirect from './components/Redirect';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavbarComponent';
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 import Offers from './pages/Offers';
@@ -37,7 +37,7 @@ function App() {
                         <Route path='edit-listing/:listingId' element={<EditListing />} />
                     </Route>
                     <Route path='/user/*' element={<Redirect url="/" />} />
-                    <Route path='/sign-in' element={<SignIn />} />
+                    <Route path='/login' element={<SignIn />} />
                     <Route path='/sign-up' element={<SignUp />} />
                     <Route path='/forgot-password' element={<ForgotPassword />} />
                     <Route path='/category/:categoryName/:listingId' element={<Listing />} />
