@@ -1,62 +1,89 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText, Container } from '@mui/material';
 import { Link, useNavigate } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../firebase.config';  // Asegúrate de importar tu configuración de Firebase
+import { auth } from '../firebase.config';  // Ensure you import your Firebase configuration
 import { signOut } from 'firebase/auth';
 import { toast } from "react-toastify";
+import MenuIcon from '@mui/icons-material/Menu';
 
 function NavbarComponent() {
-  const [user] = useAuthState(auth);  // Obtenemos el usuario autenticado, si existe
-
-  const handleLogout = () => {
-    signOut(auth)  // Cerrar sesión de Firebase
-
-  };
+  const [user] = useAuthState(auth);  // Get the authenticated user, if exists
   const navigate = useNavigate();
+  const [drawerOpen, setDrawerOpen] = useState(false); // State to control the Drawer
 
   const onLogout = () => {
-    navigate("/", { replace: true });
-    auth.signOut();
-    toast.success("Logged out successfully.");
+    signOut(auth).then(() => {
+      toast.success("Logged out successfully.");
+      navigate("/", { replace: true });
+    });
   };
+
+  const toggleDrawer = (open) => () => {
+    setDrawerOpen(open);
+  };
+
+  const handleItemClick = (callback) => {
+    callback(); // Call the passed callback
+    setDrawerOpen(false); // Close the drawer
+  };
+
+  const menuItems = (
+    <List>
+      {user ? (
+        <>
+          <ListItem button component={Link} to="/offers" onClick={() => handleItemClick(() => {})}>
+            <ListItemText primary="Offers" />
+          </ListItem>
+          <ListItem button component={Link} to="/ayuda" onClick={() => handleItemClick(() => {})}>
+            <ListItemText primary="Ayuda" />
+          </ListItem>
+          <ListItem button component={Link} to="/user/profile" onClick={() => handleItemClick(() => {})}>
+            <ListItemText primary="User" />
+          </ListItem>
+          <ListItem button onClick={() => handleItemClick(onLogout)}>
+            <ListItemText primary="Logout" />
+          </ListItem>
+        </>
+      ) : (
+        <>
+          <ListItem button component={Link} to="/login" onClick={() => handleItemClick(() => {})}>
+            <ListItemText primary="Login" />
+          </ListItem>
+          <ListItem button component={Link} to="/sign-up" onClick={() => handleItemClick(() => {})}>
+            <ListItemText primary="Register" />
+          </ListItem>
+        </>
+      )}
+    </List>
+  );
+
   return (
-    <Navbar bg="light" expand="lg">
+    <AppBar position="static">
       <Container>
-        <Navbar.Brand as={Link} to="/">MyddApp</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            {/* Mostrar enlaces solo si el usuario está autenticado */}
-            {user ? (
-              <>
-                <Nav.Link as={Link} to="/offers">offers</Nav.Link>
-                <Nav.Link as={Link} to="/ayuda">ayuda</Nav.Link>
-                <Nav.Link as={Link} to="/user/profile">user</Nav.Link>
-              </>
-            ) : (
-              <>
-                {/* Si no está autenticado, no mostrar los enlaces */}
-                {/* <Nav.Link disabled>No autorizado</Nav.Link> */}
-              </>
-            )}
-          </Nav>
-          <Nav>
-            {user ? (
-              // <Nav.Link href="#logout" onClick={handleLogout}>Logout</Nav.Link>
-              <Nav.Link href="#logout" onClick={onLogout}>Logouoot</Nav.Link>
-            ) : (
-              <>
-                {/* Mostrar enlaces de autenticación si no está autenticado */}
-                <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                <Nav.Link as={Link} to="/sign-up">Register</Nav.Link>
-              </>
-            )}
-          </Nav>
-        </Navbar.Collapse>
+        <Toolbar>
+          <Typography variant="h6" component={Link} to="/" style={{ textDecoration: 'none', color: 'white' }}>
+            MyddApp
+          </Typography>
+          <div style={{ flexGrow: 1 }} />
+
+          {/* Hamburger Menu Icon */}
+          <IconButton
+            edge="end"
+            color="inherit"
+            onClick={toggleDrawer(true)}
+            sx={{ display: { xs: 'block', md: 'none' } }} // Show on mobile
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
       </Container>
-    </Navbar>
+
+      {/* Drawer for Mobile Menu */}
+      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+        {menuItems}
+      </Drawer>
+    </AppBar>
   );
 }
 

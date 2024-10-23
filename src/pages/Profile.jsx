@@ -1,30 +1,38 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, updateProfile } from "firebase/auth";
 import { db } from "../firebase.config";
-import { updateDoc, doc, collection, getDocs, query, where, orderBy, deleteDoc, getDoc } from "firebase/firestore";
+import {
+  updateDoc,
+  doc,
+  collection,
+  getDocs,
+  query,
+  where,
+  orderBy,
+  deleteDoc,
+  getDoc,
+} from "firebase/firestore";
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
 import Offers from "./Offers";
-
-import ArrowRightIcon from '@mui/icons-material/Forward';
+import { Box, Button, Typography, CircularProgress } from "@mui/material";
+import ArrowRightIcon from "@mui/icons-material/Forward";
 
 const Profile = () => {
   const auth = getAuth();
   const [loading, setLoading] = useState(true);
   const [listings, setListings] = useState(null);
-  const [changeDetails, setChangeDetails] = useState(false);
   const [formData, setFormData] = useState({
     name: auth.currentUser.displayName,
     email: auth.currentUser.email,
   });
-  const [role, setRole] = useState(""); // Para almacenar el rol del usuario
+  const [role, setRole] = useState("");
 
   const { name, email } = formData;
-
   const navigate = useNavigate();
 
-  // Obtener el rol del usuario
+  // Fetch user role
   useEffect(() => {
     const fetchUserRole = async () => {
       try {
@@ -32,18 +40,19 @@ const Profile = () => {
         const userSnap = await getDoc(userRef);
 
         if (userSnap.exists()) {
-          setRole(userSnap.data().role); // Asigna el rol del usuario
+          setRole(userSnap.data().role);
         } else {
-          console.error("El documento de usuario no existe");
+          console.error("User document does not exist");
         }
       } catch (error) {
-        console.error("Error al obtener el rol del usuario", error);
+        console.error("Error fetching user role", error);
       }
     };
 
     fetchUserRole();
   }, [auth.currentUser.uid]);
 
+  // Fetch user listings
   useEffect(() => {
     const fetchUserListings = async () => {
       const listingsRef = collection(db, "listings");
@@ -70,9 +79,9 @@ const Profile = () => {
   }, [auth.currentUser.uid]);
 
   const onLogout = () => {
-    navigate("/", { replace: true });
     auth.signOut();
     toast.success("Logged out successfully.");
+    navigate("/", { replace: true });
   };
 
   const onSubmit = async () => {
@@ -86,7 +95,7 @@ const Profile = () => {
         await updateDoc(userRef, {
           name,
         });
-        toast.success("Update profile details successfully.");
+        toast.success("Profile details updated successfully.");
       }
     } catch (error) {
       toast.error("Could not update profile details.");
@@ -114,72 +123,38 @@ const Profile = () => {
   const onEdit = (listingId) => navigate(`/user/edit-listing/${listingId}`);
 
   return (
-    <>
-    <div className="profile">
-      <header className="profileHeader">
-        <p className="pageHeader">Usuario</p>
-        <button type="button" className="logOut" onClick={onLogout}>
-          Logout
-        </button>
-      </header>
+    <Box sx={{ padding: 2 }}>
+      <Typography variant="h4" gutterBottom>
+        Usuario
+      </Typography>
+
 
       <main>
-        <div className="profileDetailsHeader">
-          <p
-            className="changePersonalDetails"
-            onClick={() => {
-              changeDetails && onSubmit();
-              setChangeDetails((prevState) => !prevState);
-            }}
-          >
-            {changeDetails ? "Hecho" : "Cambiar"}
-          </p>
-        </div>
-
-        <div className="profileCard">
-          <form>
-            <input
-              type="text"
-              id="name"
-              className={changeDetails ? "profileNameActive" : "profileName"}
-              disabled={!changeDetails}
-              value={name}
-              onChange={onChange}
-            />
-            <input
-              type="text"
-              id="email"
-              className={changeDetails ? "profileEmailActive" : "profileEmail"}
-              disabled={!changeDetails}
-              value={email}
-              onChange={onChange}
-            />
-          </form>
-        </div>
-
-        {/* Ocultar el enlace si el rol es 'comprador' */}
+        {/* Hide the link if the role is 'comprador' */}
         {role !== "delegado" && role !== "obligado" && (
-          <Link to="/user/create-listing" className="primaryButton">
-            <p>Oferta tu ahorro de energía</p>
-            <ArrowRightIcon  style={{ color: 'white', fontSize: '48px' }} />
+          <Link to="/user/create-listing">
+            <Button variant="contained" color="primary" endIcon={<ArrowRightIcon />}>
+              Oferta tu ahorro de energía
+            </Button>
           </Link>
         )}
 
         {(role === "delegado" || role === "obligado") && (
-
-          <div >
-            <p className="listingText">Ofertas</p>
-            <ul className="listingsList">
-              <Offers />
-            </ul>
-          </div>
-          
+          <Box>
+            <Typography variant="h6" className="listingText">
+              Ofertas
+            </Typography>
+            <Offers />
+          </Box>
         )}
 
-
-        {!loading && listings?.length > 0 && (
+        {loading ? (
+          <CircularProgress />
+        ) : listings?.length > 0 ? (
           <>
-            <p className="listingText">Tus ofertas</p>
+            <Typography variant="h6" className="listingText">
+              Tus ofertas
+            </Typography>
             <ul className="categoryListings">
               {listings.map((listing) => (
                 <ListingItem
@@ -192,10 +167,11 @@ const Profile = () => {
               ))}
             </ul>
           </>
+        ) : (
+          <Typography variant="body1">No hay ofertas disponibles.</Typography>
         )}
       </main>
-    </div>
-    </>
+    </Box>
   );
 };
 

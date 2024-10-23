@@ -1,93 +1,103 @@
-import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import { toast } from "react-toastify"
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-// import OAuth from "../components/OAuth"
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { Box, TextField, IconButton, Button, Typography } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/Forward';
-
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+
 const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
         password: ''
-    })
+    });
 
-    const { email, password } = formData
-
-    const navigate = useNavigate()
+    const { email, password } = formData;
+    const navigate = useNavigate();
 
     const onChange = (e) => {
         setFormData((prevState) => ({
             ...prevState,
             [e.target.id]: e.target.value,
-        }))
-    }
+        }));
+    };
 
     const onSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         try {
-            const auth = getAuth()
-
-            const userCredential = await signInWithEmailAndPassword(
-                auth, email, password
-            )
+            const auth = getAuth();
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
             if (userCredential.user) {
-                toast.success('Logged in successfully.')
-                navigate('/user/profile') // Redirect to /user/profile after successful login
+                toast.success('Logged in successfully.');
+                navigate('/user/profile'); // Redirect to /user/profile after successful login
             }
-
         } catch (error) {
             toast.error('Bad User Credential.');
         }
-
-    }
+    };
 
     return (
-        <>
-            <div className="pageContainer">
-                <header>
-                    <p className="pageHeader">Acceso al Mercado</p>
-                </header>
-                <form onSubmit={onSubmit}>
-                    <input type="email"
-                        className="emailInput"
-                        placeholder="Email"
-                        id="email"
-                        value={email}
-                        onChange={onChange} />
+        <Box sx={{ maxWidth: 400, mx: 'auto', mt: 4 }}>
+            <Typography variant="h5" align="center" gutterBottom>
+                Acceso al Mercado
+            </Typography>
+            <form onSubmit={onSubmit}>
+                <TextField 
+                    type="email" 
+                    label="Email" 
+                    id="email" 
+                    value={email} 
+                    onChange={onChange} 
+                    fullWidth 
+                    sx={{ mb: 2 }} 
+                    variant="outlined"
+                />
 
-                    <div className="passwordInputDiv">
-                        <input type={showPassword ? "text" : "password"}
-                            className="passwordInput"
-                            placeholder="Password"
-                            id="password"
-                            value={password}
-                            onChange={onChange} />
+                <Box sx={{ position: 'relative', mb: 2 }}>
+                    <TextField 
+                        type={showPassword ? "text" : "password"} 
+                        label="Password" 
+                        id="password" 
+                        value={password} 
+                        onChange={onChange} 
+                        fullWidth 
+                        variant="outlined" 
+                    />
+                    <IconButton 
+                        onClick={() => setShowPassword((prevState) => !prevState)} 
+                        sx={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)' }} 
+                        aria-label="toggle password visibility"
+                    >
+                        {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                    </IconButton>
+                </Box>
 
-                        {/* Mostrar el icono condicionalmente */}
-                        <span onClick={() => setShowPassword((prevState) => !prevState)} className="showPassword">
-                            {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />} {/* Cambia entre los iconos */}
-                        </span>
-                    </div>
+                <Button 
+                    type="submit" 
+                    fullWidth 
+                    variant="contained" 
+                    endIcon={<ArrowRightIcon />} 
+                    sx={{ mb: 2 }}
+                >
+                    Iniciar sesión
+                </Button>
 
-                    <div className="signInBar">
-                        <button className="signInButton">
-                            <ArrowRightIcon style={{ color: 'white', fontSize: '48px' }} fill="#ffffff" width='34px' height='34px' />
-                        </button>
-                    </div>
+                <Link to='/forgot-password' style={{ display: 'block', textAlign: 'center', marginBottom: 8 }}>
+                    ¿Has olvidado tu contraseña?
+                </Link>
+                <Link to='/sign-up' style={{ display: 'block', textAlign: 'center' }}>
+                    ¿No tienes cuenta?
+                </Link>
+            </form>
 
-                    <Link to='/forgot-password' className="registerLink">¿Has olvidado tu contraseña?</Link>
-                    <Link to='/sign-up' className="registerLink">¿No tienes cuenta?</Link>
-                </form>
+            {/* Uncomment if you want to include OAuth */}
+            {/* <OAuth /> */}
+        </Box>
+    );
+};
 
-                {/* <OAuth /> */}
-            </div>
-        </>
-    )
-}
-
-export default SignIn
+export default SignIn;

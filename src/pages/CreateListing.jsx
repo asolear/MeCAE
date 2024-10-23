@@ -1,22 +1,22 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from '../firebase.config';
 import { useNavigate } from "react-router-dom";
-import Spinner from "../components/Spinner";
+import { Box, Button, Typography } from "@mui/material";
 import { toast } from "react-toastify";
-
+import Spinner from "../components/Spinner";
 import CreateListingActuacion from "./CreateListingActuacion";
 
 const CreateListing = () => {
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         ahorroEnergia: 200,
-        contraprestacion: 100, // Valor por defecto para la contraprestación
-        estado: "prevista", // Estado por defecto
+        contraprestacion: 100,
+        estado: "prevista",
         titulo: '',
-        tipo: 'Estándar', // Tipo por defecto
-        userRef: '', // Para almacenar la referencia del usuario autenticado
+        tipo: 'Estándar',
+        userRef: '',
     });
 
     const auth = getAuth();
@@ -24,10 +24,10 @@ const CreateListing = () => {
     const isMounted = useRef(true);
 
     useEffect(() => {
-        if (isMounted) {
+        if (isMounted.current) {
             onAuthStateChanged(auth, (user) => {
                 if (user) {
-                    setFormData({ ...formData, userRef: user.uid });
+                    setFormData((prevData) => ({ ...prevData, userRef: user.uid }));
                 } else {
                     navigate('sign-in');
                 }
@@ -45,42 +45,50 @@ const CreateListing = () => {
 
         const formDataCopy = {
             ...formData,
-            timestamp: serverTimestamp(), // Agregar la marca de tiempo
+            timestamp: serverTimestamp(),
         };
 
         try {
-            const docRef = await addDoc(collection(db, 'listings'), formDataCopy);
+            await addDoc(collection(db, 'listings'), formDataCopy);
             setLoading(false);
             toast.success('Listing saved');
-            navigate(`/user/profile`); // Redirigir a la página del listado creado
+            navigate(`/user/profile`);
         } catch (error) {
             setLoading(false);
-            toast.error('Failed to create listing'); // Mensaje de error
+            toast.error('Failed to create listing');
         }
     };
 
     const onFormDataChange = (data) => {
         setFormData((prevData) => ({
             ...prevData,
-            ...data, // Actualiza los datos del formulario con los nuevos valores
+            ...data,
         }));
     };
 
     if (loading) {
-        return <Spinner />; // Mostrar el spinner mientras se está guardando el formulario
+        return <Spinner />;
     }
 
     return (
-        <div className="profile">
+        <Box sx={{ padding: 2 }}>
+            <Typography variant="h4" gutterBottom>
+                Crear Oferta
+            </Typography>
             <main>
                 <form onSubmit={onSubmit}>
                     <CreateListingActuacion onFormDataChange={onFormDataChange} />
-                    <button type='submit' className='primaryButton createListingButton'>
+                    <Button 
+                        type='submit' 
+                        variant="contained" 
+                        color="primary" 
+                        sx={{ marginTop: 2 }}
+                    >
                         Ofertar
-                    </button>
+                    </Button>
                 </form>
             </main>
-        </div>
+        </Box>
     );
 };
 
