@@ -24,33 +24,36 @@ import CookieConsent from './components/CookieConsent'; // Asegúrate de que la 
 function App() {
     return (
         <>
-            <Router>
-            <Navbar />
+            {/* <CookieConsent> */}
 
-                <Routes>
-                    <Route path='/MeCAE' element={<Explore />} />
-                    <Route path='/' element={<Home />} />
-                    <Route path='/ayuda' element={<Ayuda />} />
-                    <Route path='/offers' element={<Offers />} />
-                    <Route path='/category/:categoryName' element={<Category />} />
-                    <Route path='/user' element={<PrivateRoute redirectTo="/sign-in" />}>
-                        <Route path='profile' element={<Profile />} />
-                        <Route path='create-listing' element={<CreateListing />} />
-                        <Route path='edit-listing/:listingId' element={<EditListing />} />
-                    </Route>
-                    <Route path='/user/*' element={<Redirect url="/" />} />
-                    <Route path='/login' element={<SignIn />} />
-                    <Route path='/sign-up' element={<SignUp />} />
-                    <Route path='/forgot-password' element={<ForgotPassword />} />
-                    <Route path='/category/:categoryName/:listingId' element={<Listing />} />
-                    <Route path='/contact/:landlordId' element={<Contact />} />
-                    <Route path='/*' element={<NotFound />} />
-                </Routes>
-                <CookieConsent />
+                <Router>
+                    <Navbar />
 
-                <Footer />
-            </Router>
-            <ToastContainer autoClose={3000} />
+                    <Routes>
+                        <Route path='/MeCAE' element={<Explore />} />
+                        <Route path='/' element={<Home />} />
+                        <Route path='/ayuda' element={<Ayuda />} />
+                        <Route path='/offers' element={<Offers />} />
+                        <Route path='/category/:categoryName' element={<Category />} />
+                        <Route path='/user' element={<PrivateRoute redirectTo="/sign-in" />}>
+                            <Route path='profile' element={<Profile />} />
+                            <Route path='create-listing' element={<CreateListing />} />
+                            <Route path='edit-listing/:listingId' element={<EditListing />} />
+                        </Route>
+                        <Route path='/user/*' element={<Redirect url="/" />} />
+                        <Route path='/login' element={<SignIn />} />
+                        <Route path='/sign-up' element={<SignUp />} />
+                        <Route path='/forgot-password' element={<ForgotPassword />} />
+                        <Route path='/category/:categoryName/:listingId' element={<Listing />} />
+                        <Route path='/contact/:landlordId' element={<Contact />} />
+                        <Route path='/*' element={<NotFound />} />
+                    </Routes>
+
+                    <Footer />
+                </Router>
+                {/* <ToastContainer autoClose={3000} /> */}
+            <CookieConsent />
+
         </>
 
     );

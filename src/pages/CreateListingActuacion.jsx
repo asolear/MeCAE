@@ -100,8 +100,8 @@ const CreateListingActuacion = ({ onFormDataChange }) => {
             </Typography>
 
             <FormControl fullWidth sx={{ mb: 2 }}>
-                <InputLabel Id="tipo-label">Tipo</InputLabel>
-                <Select labelId="tipo-label" id="tipo" value={tipo} onChange={handleTipoChange} label="Tipo">
+                <InputLabel>Tipo</InputLabel>
+                <Select value={tipo} onChange={handleTipoChange} label="Tipo">
                     <MenuItem value="Estándar">Estándar</MenuItem>
                     <MenuItem value="Singular">Singular</MenuItem>
                 </Select>

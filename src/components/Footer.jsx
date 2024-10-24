@@ -1,32 +1,39 @@
 import React, { useState } from 'react';
 import { Box, Button, Dialog, DialogTitle, DialogContent } from '@mui/material';
-import PrivacyPolicy from './PrivacyPolicy';  // Ensure the path is correct
-import TermsOfUse from './TermsOfUse';        // Ensure the path is correct
-import AboutUs from './AboutUs';              // Ensure the path is correct
+import PrivacyPolicy from './PrivacyPolicy';  // Asegúrate de que la ruta sea correcta
+import TermsOfUse from './TermsOfUse';        // Asegúrate de que la ruta sea correcta
+import AboutUs from './AboutUs';              // Asegúrate de que la ruta sea correcta
+import CookieConsent from './CookieConsent';  // Asegúrate de que la ruta sea correcta
 
 const Footer = () => {
   const footerYear = new Date().getFullYear();
   const [openPrivacyPolicy, setOpenPrivacyPolicy] = useState(false);
   const [openTermsOfUse, setOpenTermsOfUse] = useState(false);
   const [openAboutUs, setOpenAboutUs] = useState(false);
+  const [openCookieConsent, setOpenCookieConsent] = useState(false); // Nuevo estado para cookies
 
   const togglePrivacyPolicy = () => {
     setOpenPrivacyPolicy(!openPrivacyPolicy);
-    setOpenTermsOfUse(false);  // Close other modals if open
+    setOpenTermsOfUse(false);
     setOpenAboutUs(false);
+    setOpenCookieConsent(false);
   };
 
   const toggleTermsOfUse = () => {
     setOpenTermsOfUse(!openTermsOfUse);
-    setOpenPrivacyPolicy(false);  // Close other modals if open
+    setOpenPrivacyPolicy(false);
     setOpenAboutUs(false);
+    setOpenCookieConsent(false);
   };
 
   const toggleAboutUs = () => {
     setOpenAboutUs(!openAboutUs);
-    setOpenPrivacyPolicy(false);  // Close other modals if open
+    setOpenPrivacyPolicy(false);
     setOpenTermsOfUse(false);
+    setOpenCookieConsent(false);
   };
+
+
 
   return (
     <Box component="footer" sx={{ p: 2, bgcolor: 'primary.main', color: 'white', textAlign: 'center' }}>
@@ -35,7 +42,7 @@ const Footer = () => {
       <Button onClick={togglePrivacyPolicy} sx={{ color: 'inherit' }}>Política de Privacidad</Button>
       <p>&copy; {footerYear} MeCAE. Mercado primario de ahorros energéticos</p>
 
-      {/* Dialog for Terms of Use */}
+      {/* Dialog para los Términos de Uso */}
       <Dialog open={openTermsOfUse} onClose={toggleTermsOfUse}>
         <DialogTitle>Términos de Uso</DialogTitle>
         <DialogContent>
@@ -44,7 +51,7 @@ const Footer = () => {
         <Button onClick={toggleTermsOfUse}>Cerrar</Button>
       </Dialog>
 
-      {/* Dialog for Privacy Policy */}
+      {/* Dialog para la Política de Privacidad */}
       <Dialog open={openPrivacyPolicy} onClose={togglePrivacyPolicy}>
         <DialogTitle>Política de Privacidad</DialogTitle>
         <DialogContent>
@@ -53,7 +60,7 @@ const Footer = () => {
         <Button onClick={togglePrivacyPolicy}>Cerrar</Button>
       </Dialog>
 
-      {/* Dialog for About Us */}
+      {/* Dialog para Sobre Nosotros */}
       <Dialog open={openAboutUs} onClose={toggleAboutUs}>
         <DialogTitle>Sobre MeCAE</DialogTitle>
         <DialogContent>
@@ -61,6 +68,8 @@ const Footer = () => {
         </DialogContent>
         <Button onClick={toggleAboutUs}>Cerrar</Button>
       </Dialog>
+
+
     </Box>
   );
 };
