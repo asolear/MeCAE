@@ -14,7 +14,8 @@ const ValueInput = () => {
         data: [],
         borderColor: 'green',
         backgroundColor: 'lightgrey',
-        borderWidth: 8,
+        borderWidth: 8, // Duplicar grosor de la línea
+
         yAxisID: 'y1',
         fill: false,
       },
@@ -23,22 +24,10 @@ const ValueInput = () => {
         label: 'kWh',
         data: [],
         borderColor: 'darkblue',
-        backgroundColor: 'darkblue',
+        backgroundColor: 'lightgrey',
         yAxisID: 'y2',
       },
     ],
-  });
-
-  const [lineOptions, setLineOptions] = useState({
-    scales: {
-      y1: {
-        beginAtZero: true,
-      },
-      y2: {
-        beginAtZero: true,
-      },
-    },
-    maintainAspectRatio: false,
   });
 
   useEffect(() => {
@@ -47,6 +36,8 @@ const ValueInput = () => {
       const querySnapshot = await getDocs(collection(db, 'listings'));
 
       const dailyData = {};
+      let accumulatedCost = 0;
+      let accumulatedQuantity = 0;
 
       querySnapshot.forEach((doc) => {
         const docData = doc.data();
@@ -55,7 +46,7 @@ const ValueInput = () => {
           : new Date(docData.timestamp).toLocaleDateString();
 
         if (!dailyData[date]) {
-          dailyData[date] = { totalCost: 0, totalQuantity: 0 };
+          dailyData[date] = { totalCost: 0, totalQuantity: 0, accumulatedQuantity: 0 };
         }
 
         const ahorroEnergia = Number(docData.ahorroEnergia);
@@ -63,6 +54,11 @@ const ValueInput = () => {
 
         dailyData[date].totalCost += contraprestacion * ahorroEnergia;
         dailyData[date].totalQuantity += ahorroEnergia;
+
+        accumulatedCost += contraprestacion * ahorroEnergia;
+        accumulatedQuantity += ahorroEnergia;
+
+        dailyData[date].accumulatedQuantity = ahorroEnergia;
       });
 
       const sortedDates = Object.keys(dailyData).sort((a, b) => new Date(a) - new Date(b));
@@ -70,16 +66,21 @@ const ValueInput = () => {
       const labels = [];
       const unitCostDataArray = [];
       const quantityDataArray = [];
+      
+      let cumulativeCost = 0;
+      let cumulativeQuantity = 0;
 
       sortedDates.forEach((date) => {
-        const { totalCost, totalQuantity } = dailyData[date];
+        const { totalCost, totalQuantity, accumulatedQuantity } = dailyData[date];
         labels.push(date);
 
-        // Calcular el costo unitario solo para el día en cuestión
-        const dailyUnitCost = totalQuantity ? (totalCost / totalQuantity) : 0;
-        unitCostDataArray.push(dailyUnitCost);
+        cumulativeCost += totalCost;
+        cumulativeQuantity += totalQuantity;
 
-        quantityDataArray.push(totalQuantity);
+        const weightedAverage = cumulativeQuantity ? (cumulativeCost / cumulativeQuantity) : 0;
+        unitCostDataArray.push(weightedAverage);
+
+        quantityDataArray.push(accumulatedQuantity);
       });
 
       const minUnitCost = Math.min(...unitCostDataArray);
@@ -118,13 +119,13 @@ const ValueInput = () => {
             title: {
               display: true,
               text: 'c€/kWh',
-              color: 'green',
+              color: 'green', // Color del título del eje Y
             },
             ticks: {
-              color: 'green',
+              color: 'green', // Color de las etiquetas del eje Y
             },
             grid: {
-              color: 'lightgrey',
+              color: 'lightgrey', // Color de las líneas del eje Y
             },
           },
           y2: {
@@ -133,13 +134,13 @@ const ValueInput = () => {
             title: {
               display: true,
               text: 'kWh',
-              color: 'darkblue',
+              color: 'darkblue', // Color del título del eje Y derecho
             },
             ticks: {
-              color: 'darkblue',
+              color: 'darkblue', // Color de las etiquetas del eje Y derecho
             },
             grid: {
-              drawOnChartArea: false,
+              drawOnChartArea: false, // Desactiva las líneas de grid del eje derecho
             },
           },
         },
@@ -149,6 +150,18 @@ const ValueInput = () => {
 
     fetchData();
   }, []);
+
+  const [lineOptions, setLineOptions] = useState({
+    scales: {
+      y1: {
+        beginAtZero: true,
+      },
+      y2: {
+        beginAtZero: true,
+      },
+    },
+    maintainAspectRatio: false,
+  });
 
   return (
     <div>

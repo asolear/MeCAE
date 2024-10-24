@@ -42,15 +42,43 @@ const SignUp = () => {
     const onChange = (e) => {
         const { id, value, name } = e.target;
 
-        setFormData((prevState) => ({
-            ...prevState,
-            cedente: 'persona_fisica', // Reset cedente if role changes
-            empresa: '',
-            nif: '',
-            dni: '',
-            domicilio: '',
-            telefono: ''
-        }));
+        // Check if it's a Select component
+        if (name === "role" || name === "cedente") {
+            setFormData((prevState) => ({
+                ...prevState,
+                [name]: value,
+            }));
+
+            // Reset dependent fields when role or cedente changes
+            if (name === "role") {
+                setFormData((prevState) => ({
+                    ...prevState,
+                    cedente: 'persona_fisica', // Reset cedente if role changes
+                    empresa: '',
+                    nif: '',
+                    dni: '',
+                    domicilio: '',
+                    telefono: ''
+                }));
+            }
+
+            if (name === "cedente") {
+                setFormData((prevState) => ({
+                    ...prevState,
+                    empresa: '', // Reset fields when cedente type changes
+                    nif: '',
+                    dni: '',
+                    domicilio: '',
+                    telefono: ''
+                }));
+            }
+        } else {
+            // For TextField components
+            setFormData((prevState) => ({
+                ...prevState,
+                [id]: value,
+            }));
+        }
     };
 
     const onSubmit = async (e) => {
@@ -130,7 +158,7 @@ const SignUp = () => {
                             </Select>
                         </FormControl>
 
-                        {cedente === 'persona_juridica' && (
+                        {cedente === 'comunidad_propietarios' && (
                             <>
                                 <TextField fullWidth label="Nombre de la empresa" id="empresa" value={empresa} onChange={onChange} sx={{ mb: 2 }} />
                                 <TextField fullWidth label="NIF" id="nif" value={nif} onChange={onChange} sx={{ mb: 2 }} />
@@ -140,6 +168,15 @@ const SignUp = () => {
                             </>
                         )}
 
+                        {cedente === 'persona_juridica' && (
+                            <>
+                                <TextField fullWidth label="Nombre de la empresa" id="empresa" value={empresa} onChange={onChange} sx={{ mb: 2 }} />
+                                <TextField fullWidth label="NIF" id="nif" value={nif} onChange={onChange} sx={{ mb: 2 }} />
+                                <TextField fullWidth label="Domicilio para notificaciones" id="domicilio" value={domicilio} onChange={onChange} sx={{ mb: 2 }} />
+                                <TextField fullWidth label="Teléfono" id="telefono" value={telefono} onChange={onChange} sx={{ mb: 2 }} />
+                                <TextField fullWidth type="email" label="Correo electrónico" id="email" value={email} onChange={onChange} sx={{ mb: 2 }} />
+                            </>
+                        )}
                         {cedente === 'persona_fisica' && (
                             <>
                                 <TextField fullWidth label="Dª/D" id="name" value={name} onChange={onChange} sx={{ mb: 2 }} />
