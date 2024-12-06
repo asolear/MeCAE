@@ -1,0 +1,153 @@
+site_name: Actualidad
+copyright: Copyright &copy; 2023 - 2024  IberCAE <br> Tel. 951 733 491
+
+
+theme:
+
+  features:
+    - navigation.top
+    # - navigation.tabs
+    - toc.integrate 
+    - content.tabs.link
+    # - navigation.expand
+
+  icon:
+    logo: material/book
+  name: material
+  # custom_dir: 'overrides'
+
+
+
+
+  palette:
+    primary: white
+  #   accent: orange
+
+  # palette:
+  #   - scheme: slate
+  #     primary: blue grey
+  #     accent: orange
+
+  language: es
+
+plugins:
+#   - awesome-pages
+  # - blog:
+  #     post_excerpt_separator: pagina_1.png
+  #     authors: false
+
+      # # categories_toc: true
+      # blog_toc: true
+      # # blog_dir: bbb
+
+
+  # - privacy
+  - search
+  - blog:
+      archive_date_format: MMMM yyyy
+      categories_allowed:
+        - Holidays
+        - News
+  - tags
+
+extra_javascript:
+  - js/pdfjs/pdfrenderizar.js
+  - js/leafletmio.js
+  - js/mathjax.js
+  - js/custom.js
+  # 
+  - js/firebase/auth.js
+  # 
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  # - https://giscus.app/client.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+
+
+extra_css:
+  - css/custom.css
+extra:
+
+  generator: false
+  # 
+  # # 
+  # # 
+  # analytics:
+  #   provider: google
+  #   property: G-VP4HGGH9Y5
+  # # https://analytics.google.com/analytics/web/#/p257577796/realtime/overview?params=_u..nav%3Dmaui
+  # consent:
+  #   title:  Consentimiento de Cookies
+  #   description: >- 
+  #     En IberCAE utilizamos cookies para brindarte una experiencia más relevante recordando tus preferencias y visitas anteriores. Al hacer clic en "Aceptar", aceptas el uso de TODAS las cookies.
+  #   cookies:
+  #     analytics:
+  #       name: Google Analytics
+  #       checked: true
+  #   actions:
+  #     - accept
+  #     - reject  
+  #     # 
+  #     # 
+  # alternate:
+  #   - name: Español
+  #     link: /
+  #     lang: es
+  #   - name: Frrances 
+  #     link: CONTACTO/lang/fr/
+  #     lang: fr
+  #   - name: Italiano
+  #     link: CONTACTO/lang/it/
+  #     lang: it
+  social:
+    # - icon: fontawesome/brands/whatsapp 
+      # link: https://api.whatsapp.com/send?phone=951733491
+    - icon: fontawesome/solid/phone
+      link: tel:+34 951 733 491
+    - icon: material/email
+      link: mailto:info@ibercae.com
+    # - icon: fontawesome/brands/github
+    #   link: https://github.com/kgnete
+    # - icon: fontawesome/brands/stack-overflow
+    #   link: https://stackoverflow.com/users/3788513/kgnete
+    # - icon: fontawesome/brands/kaggle
+    #   link: https://www.kaggle.com/kgnete
+    # - icon: fontawesome/brands/docker
+    #   link: https://hub.docker.com/u/kgnete
+    # - icon: fontawesome/brands/x-twitter 
+    #   link: https://twitter.com/kgnete
+    # - icon: fontawesome/brands/facebook 
+    #   link: https://www.facebook.com/kgnete
+    # - icon: fontawesome/brands/linkedin 
+    #   link: https://www.linkedin.com/in/k-gnete-590154165/
+    # - icon: fontawesome/brands/instagram 
+    #   link: https://www.instagram.com/kgnete/
+
+
+
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - meta
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+          

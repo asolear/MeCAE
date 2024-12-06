@@ -1,0 +1,680 @@
+[
+    {
+        "codigo": "AGR010",
+        "nombre": "Pantallas térmicas en invernaderos",
+        "STR": "AGR",
+        "sector": "Agrario"
+    },
+    {
+        "codigo": "AGR020",
+        "nombre": "Recuperación del calor por medio de un sistema para el preenfriamiento de la leche Sector industrial",
+        "STR": "AGR",
+        "sector": "Agrario"
+    },
+    {
+        "codigo": "IND010",
+        "nombre": "Mejora del aislamiento de tuberías y superficies planas de instalaciones y equipos utilizados en procesos industriales para temperaturas de más de 60°",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND020",
+        "nombre": "Sustitución del refrigerante de una instalación frigorífica",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND030",
+        "nombre": "Sustitución de compresor para instalación frigorífica",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND040",
+        "nombre": "Sustitución de caldera de combustión existente por bomba de calor",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND050",
+        "nombre": "Sustitución del sistema de iluminación por sistema con fuentes luminosas y|o luminarias tipo LED",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND060",
+        "nombre": "Sustitución de generador para climatización por bomba de calor de accionamiento eléctrico",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND070",
+        "nombre": "Sustitución de bomba de alta presión por una bomba de pistones axiales",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND080",
+        "nombre": "Instalación de una cámara isobárica o intercambiador de presión (CIP)",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND081",
+        "nombre": "Sustitución del recuperador, cámara isobárica o intercambiador de presión (CIP)",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND090",
+        "nombre": "Sustitución o reemplazo de compresor de aire por uno más eficiente",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND110",
+        "nombre": "Recuperación de calor de un compresor para uso de calefacción",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND120",
+        "nombre": "Sustitución de quemador modulante de caldera de combustión de gas",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND140",
+        "nombre": "Reforma, sustitución o nueva instalación de planta enfriadora de procesos de alta eficiencia",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND150",
+        "nombre": "Central frigorífica de alta eficiencia con sistemas de refrigeración directa",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND160",
+        "nombre": "Unidad condensadora de alta eficiencia",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND170",
+        "nombre": "Sustitución de motores eléctricos de inducción",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND180",
+        "nombre": "Sustitución de intercambiador|es de calor para la reducción de la resistividad térmica en sistemas industriales",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND190",
+        "nombre": "División de líneas de evaporación en instalación frigorífica centralizada",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND200",
+        "nombre": "Implantación de sistemas economizadores o multietapa, en instalación frigorífica",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND210",
+        "nombre": "Reducción de la presión de condensación en instalación frigorífica por cambio a tecnología más eficiente",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND220",
+        "nombre": "Aumento de la presión de evaporación por cambio a tecnología más eficiente",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND230",
+        "nombre": "Recuperación de calor desde procesos exotérmicos a otros procesos endotérmicos de la misma planta",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND240",
+        "nombre": "Implantación de variador de velocidad",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND250",
+        "nombre": "Sustitución total o parcial de la instalación térmica por tecnología solar térmica",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND260",
+        "nombre": "Sustitución de un Sistema de Alimentación Ininterrumpida (SAI)",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND270",
+        "nombre": "Sustitución de transporte neumático de sólidos por sistema de transporte mecánico",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND280",
+        "nombre": "Sustitución de bomba por otra más eficiente",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "IND290",
+        "nombre": "Recuperación de calor en circuito frigorífico Sector terciario",
+        "STR": "IND",
+        "sector": "Industrial"
+    },
+    {
+        "codigo": "TER010",
+        "nombre": "Rehabilitación de la envolvente térmica de edificios terciarios existentes con superficie afectada mayor del 25por ciento",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER011",
+        "nombre": "Rehabilitación de la envolvente térmica de edificios terciarios existentes con superficie afectada mayor del 25por ciento (Canarias)",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER020",
+        "nombre": "Rehabilitación de la parte opaca de la envolvente térmica de edificios terciarios con superficie afectada inferior o igual del 25 por ciento de la envolvente térmica final",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER021",
+        "nombre": "Rehabilitación de la parte opaca de la envolvente térmica de edificios terciarios con superficie afectada inferior o igual del 25 por ciento de la envolvente térmica final (Canarias)",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER030",
+        "nombre": "Sustitución del sistema de iluminación por sistema con fuentes luminosas y|o luminarias tipo LED",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER040",
+        "nombre": "Sustitución de generador de climatización por bomba de accionamiento eléctrico",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER050",
+        "nombre": "Sistema de automatización y control para edificios del sector terciario (BACS)",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER060",
+        "nombre": "Renovación o sustitución de ventanas en edificios terciarios existentes",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER061",
+        "nombre": "Renovación o sustitución de ventanas en edificios existentes (Canarias)",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER070",
+        "nombre": "Nueva implantación, sustitución o ampliación de instalación térmica en un edificio y piscina con tecnología solar térmica",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER080",
+        "nombre": "Rehabilitación profunda de un edificio terciario existente",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER090",
+        "nombre": "Sustitución del refrigerante de una instalación frigorífica",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER100",
+        "nombre": "Sustitución de caldera de combustión existente por bomba de calor de accionamiento eléctrico",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER110",
+        "nombre": "Sustitución de compresor para instalación frigorífica o de climatización",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER120",
+        "nombre": "Sustitución de quemador modulante de caldera de combustión de gas",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER140",
+        "nombre": "Reforma, sustitución o nueva instalación de planta enfriadora de procesos de alta eficiencia",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER150",
+        "nombre": "Reforma, sustitución o nueva instalación de central frigorífica de alta eficiencia con sistemas de refrigeración directa",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER160",
+        "nombre": "Sustitución, reforma o nueva instalación de una unidad condensadora de alta eficiencia",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER170",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática A3 o A4",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER171",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática B3 o B4",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER172",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática C1, C2, C3 o C4",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER173",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática D1, D2 o D3",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER174",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática E1",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER175",
+        "nombre": "Hibridación en modo alternativo de caldera de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática A3 o A4",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER176",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática B3 o B4",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER177",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática C1, C2, C3 o C4",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER178",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática D1, D2 o D3",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER179",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática E1",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER180",
+        "nombre": "Sustitución del sistema de iluminación vial ambiental TER 190: Reformado de aparatos de refrigeración para alimentos y bebidas de venta directa",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER200",
+        "nombre": "Sustitución de aparato de refrigeración con función de venta directa",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER210",
+        "nombre": "Sustitución de calderas individuales|colectiva en edificio terciario por conexión a una red de calor",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER220",
+        "nombre": "Sustitución de un sistema de ventilación existente (natural o mecánica), por un sistema de ventilación mecánica con recuperación de calor de alta eficiencia en edificios no residenciales",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER240",
+        "nombre": "Implantación de variador de velocidad",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER260",
+        "nombre": "Sustitución de un Sistema de Alimentación Ininterrumpida (SAI)",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "TER280",
+        "nombre": "Sustitución de bomba por otra más eficiente Sector residencial",
+        "STR": "TER",
+        "sector": "Terciario"
+    },
+    {
+        "codigo": "RES010",
+        "nombre": "Rehabilitación de la envolvente térmica de edificios de viviendas con superficie afectada mayor del 25 por ciento",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES011",
+        "nombre": "Rehabilitación de la envolvente térmica de edificios de viviendas con superficie afectada mayor del 25 por ciento (Canarias)",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES020",
+        "nombre": "Rehabilitación de la parte opaca de la envolvente térmica de edificios de viviendas con superficie afectada inferior o igual al 25 por ciento de la envolvente térmica final",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES021",
+        "nombre": "Rehabilitación de la parte opaca de la envolvente térmica de edificios de viviendas con superficie afectada inferior o igual al 25 por ciento de la envolvente térmica final (Canarias)",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES030",
+        "nombre": "Nueva implantación, sustitución o ampliación de instalación térmica en un edificio y piscina con tecnología solar térmica",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES040",
+        "nombre": "Sistema de automatización y control para viviendas y edificios (BACS)",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES050",
+        "nombre": "Adquisición de frigoríficos de alta eficiencia",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES051",
+        "nombre": "Adquisición de frigorífico-congelador de alta eficiencia",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES052",
+        "nombre": "Adquisición de congelador de alta eficiencia",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES053",
+        "nombre": "Adquisición de lavadoras de alta eficiencia",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES054",
+        "nombre": "Adquisición de lavavajillas de alta eficiencia",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES060",
+        "nombre": "Sustitución de caldera de combustión por una bomba de calor de accionamiento eléctrico",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES070",
+        "nombre": "Renovación o sustitución de ventanas en edificios de viviendas",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES071",
+        "nombre": "Renovación o sustitución de ventanas en edificios de viviendas (Canarias)",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES080",
+        "nombre": "Rehabilitación profunda de edificios de viviendas",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES090",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática A3 o A4",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES091",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática B3 o B4",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES092",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática C1, C2, C3 o C4",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES093",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática D1, D2 o D3",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES094",
+        "nombre": "Hibridación en modo paralelo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática E1",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES095",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática A3 o A4",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES096",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática B3 o B4",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES097",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática C1, C2, C3 o C4",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES098",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática D1, D2 o D3",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES099",
+        "nombre": "Hibridación en modo alternativo de caldera|s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática E1",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES210",
+        "nombre": "Sustitución de calderas individuales|colectiva en edificio residencial por conexión a una red de calor",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES220",
+        "nombre": "Sustitución de un sistema de ventilación existente (natural o mecánica) por un sistema de ventilación mecánica controlada de doble flujo con recuperación de calor",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES230",
+        "nombre": "Sustitución de sistema de ventilación existente (natural o mecánica) por un sistema de ventilación mecánica controlada de simple flujo higrorregulable",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES010S",
+        "nombre": "Rehabilitación de la envolvente térmica de edificios de viviendas con superficie afectada mayor del 25por ciento, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES011S",
+        "nombre": "Rehabilitación de la envolvente térmica de edificios de vivienda con superficie afectada mayor del 25 por ciento (Canarias), para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES020S",
+        "nombre": "Rehabilitación de la parte opaca de la envolvente térmica de edificios de viviendas con superficie afectada inferior o igual al 25 por ciento de la envolvente térmica final, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES021S",
+        "nombre": "Rehabilitación de la parte opaca de la envolvente térmica de edificios de viviendas con superficie afectada inferior o igual al 25 por ciento de la envolvente térmica final (Canarias), para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES030S",
+        "nombre": "Nueva implantación, sustitución o ampliación de instalación térmica en un edificio y piscina con tecnología solar térmica, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES040S",
+        "nombre": "Sistema de automatización y control para viviendas y edificios (BACS), para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES050S",
+        "nombre": "Adquisición de frigoríficos de alta eficiencia, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES051S",
+        "nombre": "Adquisición de frigorífico-congelador de alta eficiencia, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES052S",
+        "nombre": "Adquisición de congelador de alta eficiencia, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES053S",
+        "nombre": "Adquisición de lavadoras de alta eficiencia, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES054S",
+        "nombre": "Adquisición de lavavajillas de alta eficiencia, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES060S",
+        "nombre": "Sustitución de caldera combustible fósil por una bomba de calor tipo aire-aire o aire-agua, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES070S",
+        "nombre": "Renovación o sustitución de ventanas en edificios de viviendas, para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES071S",
+        "nombre": "Renovación o sustitución de ventanas en edificios de viviendas (Canarias), para la lucha contra la pobreza energética",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "RES080S",
+        "nombre": "Rehabilitación profunda de un edificio de viviendas, para la lucha contra la pobreza energética Sector transporte",
+        "STR": "RES",
+        "sector": "Residencial"
+    },
+    {
+        "codigo": "TRA010",
+        "nombre": "Sustitución en vehículos a motor de sus neumáticos por otros de mayor eficiencia energética",
+        "STR": "TRA",
+        "sector": "Transporte"
+    },
+    {
+        "codigo": "TRA020",
+        "nombre": "Sistema de telemetría y geoposicionamiento en flota de transporte",
+        "STR": "TRA",
+        "sector": "Transporte"
+    },
+    {
+        "codigo": "TRA030",
+        "nombre": "Vehículo compartido en trayectos de largo recorrido",
+        "STR": "TRA",
+        "sector": "Transporte"
+    },
+    {
+        "codigo": "TRA040",
+        "nombre": "Movilidad colaborativa urbana y metropolitana",
+        "STR": "TRA",
+        "sector": "Transporte"
+    },
+    {
+        "codigo": "TRA050",
+        "nombre": "Sustitución de vehículo de combustión por un vehículo eléctrico puro Sector agropecuario",
+        "STR": "TRA",
+        "sector": "Transporte"
+    }
+]
