@@ -1,0 +1,113 @@
+FICHA,CODIGO,VERSION,SECTOR,PAGI,PAGF,FORMULARIO,CARPETA
+AGR010: Pantallas térmicas en invernaderos,AGR010,V1.0,Agrario,9,19,CAEs/BOE-A-2024-14816.pdf,CAES
+AGR020: Recuperación del calor del proceso de preenfriamiento de la leche para usos térmicos en la explotación ganadera,AGR020,V1.1,Agrario,19,25,CAEs/BOE-A-2024-14816.pdf,CAES
+IND010: Mejora del aislamiento de tuberías y superficies planas de instalaciones y equipos utilizados en procesos industriales para temperaturas de más de 60°,IND010,V1.1,Industrial,25,43,CAEs/BOE-A-2024-14816.pdf,CAES
+IND020: Sustitución del refrigerante de una instalación Frigorífica,IND020,V1.1,Industrial,43,53,CAEs/BOE-A-2024-14816.pdf,CAES
+IND030: Sustitución de compresor para instalación Frigorífica,IND030,V1.1,Industrial,53,63,CAEs/BOE-A-2024-14816.pdf,CAES
+IND040: Sustitución de caldera de combustión existente por bomba de calor,IND040,V1.1,Industrial,63,83,CAEs/BOE-A-2024-14816.pdf,CAES
+IND050: Sustitución del sistema de iluminación por sistema con fuentes luminosas y/o luminarias tipo LED,IND050,V1.1,Industrial,84,91,CAEs/BOE-A-2024-14816.pdf,CAES
+IND060: Sustitución de generador para climatización por bomba de calor de accionamiento eléctrico,IND060,V1.1,Industrial,91,106,CAEs/BOE-A-2024-14816.pdf,CAES
+IND070: Sustitución de bomba de alta presión por una bomba de pistones axiales,IND070,V1.1,Industrial,106,112,CAEs/BOE-A-2024-14816.pdf,CAES
+IND080: Instalación de una cámara isobárica o intercambiador de presión (CIP),IND080,V1.1,Industrial,112,120,CAEs/BOE-A-2024-14816.pdf,CAES
+"IND081: Sustitución del recuperador, cámara isobárica o intercambiador de presión (CIP)",IND081,V1.1,Industrial,120,127,CAEs/BOE-A-2024-14816.pdf,CAES
+IND090: Sustitución o reemplazo de compresor de aire por uno más eficiente,IND090,V1.1,Industrial,127,136,CAEs/BOE-A-2024-14816.pdf,CAES
+IND110: Recuperación de calor de un compresor para uso de calefacción,IND110,V1.1,Industrial,136,144,CAEs/BOE-A-2024-14816.pdf,CAES
+IND120: Sustitución de quemador modulante de caldera de combustión de gas,IND120,V1.1,Industrial,144,151,CAEs/BOE-A-2024-14816.pdf,CAES
+"IND140: Reforma, sustitución o nueva instalación de planta enfriadora de procesos de alta eficiencia",IND140,V1.1,Industrial,151,161,CAEs/BOE-A-2024-14816.pdf,CAES
+IND150: Central frigorífica de alta eficiencia con sistemas de refrigeración directa,IND150,V1.1,Industrial,161,171,CAEs/BOE-A-2024-14816.pdf,CAES
+IND160: Unidad condensadora de alta eficiencia,IND160,V1.1,Industrial,171,181,CAEs/BOE-A-2024-14816.pdf,CAES
+IND170: Sustitución de motores eléctricos de inducción,IND170,V1.1,Industrial,181,188,CAEs/BOE-A-2024-14816.pdf,CAES
+IND180: Sustitución de intercambiador/es de calor para la reducción de la resistividad térmica en sistemas industriales,IND180,V1.1,Industrial,188,195,CAEs/BOE-A-2024-14816.pdf,CAES
+IND190: División de líneas de evaporación en instalación frigorífica centralizada,IND190,V1.1,Industrial,195,206,CAEs/BOE-A-2024-14816.pdf,CAES
+"IND200: Implantación de sistemas economizadores o multietapa, en instalación frigorífica centralizada o compacta.",IND200,V1.1,Industrial,206,226,CAEs/BOE-A-2024-14816.pdf,CAES
+IND220: Aumento de la presión de evaporación por cambio a tecnología más eficiente en una instalación frigorífica centralizada o compacta.,IND220,V1.1,Industrial,226,237,CAEs/BOE-A-2024-14816.pdf,CAES
+IND230: Recuperación de calor desde procesos exotérmicos a otros procesos endotérmicos de la misma planta,IND230,V1.1,Industrial,237,245,CAEs/BOE-A-2024-14816.pdf,CAES
+IND240: Implantación de variador de velocidad,IND240,V1.1,Industrial,245,252,CAEs/BOE-A-2024-14816.pdf,CAES
+IND250: Sustitución total o parcial de la instalación térmica por tecnología solar térmica,IND250,V1.1,Industrial,252,258,CAEs/BOE-A-2024-14816.pdf,CAES
+IND260: Sustitución de un Sistema de Alimentación Ininterrumpida (SAI),IND260,V1.1,Industrial,258,267,CAEs/BOE-A-2024-14816.pdf,CAES
+IND270: Sustitución de transporte neumático de sólidos por sistema de transporte mecánico,IND270,V1.1,Industrial,267,274,CAEs/BOE-A-2024-14816.pdf,CAES
+IND280: Sustitución de bomba por otra más eficiente,IND280,V1.1,Industrial,274,283,CAEs/BOE-A-2024-14816.pdf,CAES
+IND290: Recuperación de calor en circuito frigorífico,IND290,V1.1,Industrial,283,290,CAEs/BOE-A-2024-14816.pdf,CAES
+TER010: Rehabilitación de la envolvente térmica de edificios terciarios existentes con superficie afectada mayor del 25%,TER010,V1.1,Terciario,290,298,CAEs/BOE-A-2024-14816.pdf,CAES
+TER011: Rehabilitación de la envolvente térmica de TER011: Rehabilitación de la envolvente térmica de mayor del 25% (Canarias),TER011,V1.1,Terciario,298,306,CAEs/BOE-A-2024-14816.pdf,CAES
+TER020: Rehabilitación de la parte opaca de la envolvente térmica de edificios terciarios con superficie afectada inferior o igual del 25 % de la envolvente térmica final,TER020,V1.1,Terciario,306,314,CAEs/BOE-A-2024-14816.pdf,CAES
+TER021: Rehabilitación de la parte opaca de la envolvente térmica de edificios terciarios con superficie afectada inferior o igual del 25 % de la envolvente térmica final (Canarias),TER021,V1.1,Terciario,314,322,CAEs/BOE-A-2024-14816.pdf,CAES
+TER030: Sustitución del sistema de iluminación por sistema con fuentes luminosas y/o luminarias tipo LED,TER030,V1.1,Terciario,322,330,CAEs/BOE-A-2024-14816.pdf,CAES
+TER040: Sustitución de generador de climatización por bomba de calor de accionamiento eléctrico.,TER040,V1.1,Terciario,330,360,CAEs/BOE-A-2024-14816.pdf,CAES
+TER050: Sistema de automatización y control para edificios del sector terciario (BACS1),TER050,V1.1,Terciario,360,375,CAEs/BOE-A-2024-14816.pdf,CAES
+TER060: Renovación o sustitución de ventanas en edificios terciarios existentes,TER060,V1.1,Terciario,375,383,CAEs/BOE-A-2024-14816.pdf,CAES
+TER061: Renovación o sustitución de ventanas en edificios existentes (Canarias),TER061,V1.1,Terciario,383,391,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER070: Nueva implantación, sustitución o ampliación de instalación térmica en un edificio y piscina con tecnología solar térmica",TER070,V1.1,Terciario,391,398,CAEs/BOE-A-2024-14816.pdf,CAES
+TER080: Rehabilitación profunda de un edificio terciario existente,TER080,V1.1,Terciario,398,405,CAEs/BOE-A-2024-14816.pdf,CAES
+TER090: Sustitución del refrigerante de una instalación frigorífica,TER090,V1.1,Terciario,405,415,CAEs/BOE-A-2024-14816.pdf,CAES
+TER100: Sustitución de caldera de combustión existente,TER100,V1.1,Terciario,415,439,CAEs/BOE-A-2024-14816.pdf,CAES
+TER110: Sustitución de compresor para instalación frigorífica o de climatización,TER110,V1.1,Terciario,439,449,CAEs/BOE-A-2024-14816.pdf,CAES
+TER120: Sustitución de quemador modulante de caldera de combustión de gas,TER120,V1.1,Terciario,449,456,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER140: Reforma, sustitución o nueva instalación de planta enfriadora de procesos de alta eficiencia",TER140,V1.1,Terciario,456,467,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER150: Reforma, sustitución o nueva instalación de central frigorífica de alta eficiencia con sistemas de refrigeración directa",TER150,V1.1,Terciario,467,478,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER160: Sustitución, reforma o nueva instalación de una unidad condensadora de alta eficiencia",TER160,V1.1,Terciario,478,489,CAEs/BOE-A-2024-14816.pdf,CAES
+TER170: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática A3 o A4,TER170,V1.1,Terciario,489,506,CAEs/BOE-A-2024-14816.pdf,CAES
+TER171: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática B3 o B4,TER171,V1.1,Terciario,506,523,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER172: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática C1, C2, C3 o C4",TER172,V1.1,Terciario,523,540,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER173: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática D1, D2 o D3 ",TER173,V1.1,Terciario,540,557,CAEs/BOE-A-2024-14816.pdf,CAES
+TER174: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática E1,TER174,V1.1,Terciario,557,574,CAEs/BOE-A-2024-14816.pdf,CAES
+TER175: Hibridación en modo alternativo de caldera de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática A3 o A4,TER175,V1.1,Terciario,574,591,CAEs/BOE-A-2024-14816.pdf,CAES
+TER176: Hibridación en modo alternativo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática B3 o B4,TER176,V1.1,Terciario,591,608,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER177: Hibridación en modo alternativo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática C1, C2, C3 o C4",TER177,V1.1,Terciario,608,625,CAEs/BOE-A-2024-14816.pdf,CAES
+"TER178: Hibridación en modo alternativo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática D1, D2 o D3 ",TER178,V1.1,Terciario,625,642,CAEs/BOE-A-2024-14816.pdf,CAES
+TER179: Hibridación en modo alternativo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios no residenciales ubicados en la zona climática E1,TER179,V1.1,Terciario,642,659,CAEs/BOE-A-2024-14816.pdf,CAES
+TER180: Sustitución del sistema de iluminación vial ambiental,TER180,V1.1,Terciario,659,666,CAEs/BOE-A-2024-14816.pdf,CAES
+TER 190: Reformado de aparatos de refrigeración para alimentos y bebidas de venta directa,TER190,V1.1,Terciario,666,674,CAEs/BOE-A-2024-14816.pdf,CAES
+TER200: Sustitución de aparato de refrigeración con función de venta directa,TER200,V1.1,Terciario,674,707,CAEs/BOE-A-2024-14816.pdf,CAES
+TER240: Implantación de variador de velocidad,TER240,V1.1,Terciario,707,714,CAEs/BOE-A-2024-14816.pdf,CAES
+TER260: Sustitución de un Sistema de Alimentación Ininterrumpida (SAI),TER260,V1.1,Terciario,714,723,CAEs/BOE-A-2024-14816.pdf,CAES
+TER280: Sustitución de bomba por otra más eficiente,TER280,V1.1,Terciario,723,731,CAEs/BOE-A-2024-14816.pdf,CAES
+RES010: Rehabilitación de la envolvente térmica de edificios de viviendas con superficie afectada mayor del 25 %,RES010,V1.1,Residencial,731,739,CAEs/BOE-A-2024-14816.pdf,CAES
+RES011: Rehabilitación de la envolvente térmica de edificios de viviendas con superficie afectada mayor del  25 % (Canarias),RES011,V1.1,Residencial,739,747,CAEs/BOE-A-2024-14816.pdf,CAES
+RES020: Rehabilitación de la parte opaca de la envolvente térmica de edificios de viviendas con superficie afectada inferior o igual al 25 % de la envolvente térmica final,RES020,V1.1,Residencial,747,763,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES030: Nueva implantación, sustitución o ampliación de instalación térmica en un edificio y piscina con tecnología solar térmica",RES030,V1.1,Residencial,763,770,CAEs/BOE-A-2024-14816.pdf,CAES
+RES040: Sistema de automatización y control para viviendas y edificios (BACS1),RES040,V1.1,Residencial,770,782,CAEs/BOE-A-2024-14816.pdf,CAES
+RES050: Adquisición de frigoríficos de alta eficiencia ,RES050,V1.1,Residencial,782,790,CAEs/BOE-A-2024-14816.pdf,CAES
+RES051: Adquisición de frigorífico-congelador de alta eficiencia,RES051,V1.1,Residencial,790,798,CAEs/BOE-A-2024-14816.pdf,CAES
+RES052: Adquisición de congelador de alta eficiencia,RES052,V1.1,Residencial,798,806,CAEs/BOE-A-2024-14816.pdf,CAES
+RES053: Adquisición de lavadoras de alta eficiencia,RES053,V1.1,Residencial,806,814,CAEs/BOE-A-2024-14816.pdf,CAES
+RES054: Adquisición de lavavajillas de alta eficiencia,RES054,V1.1,Residencial,814,822,CAEs/BOE-A-2024-14816.pdf,CAES
+RES060: Sustitución de caldera de combustión por una bomba de calor de accionamiento eléctrico.,RES060,V1.1,Residencial,822,839,CAEs/BOE-A-2024-14816.pdf,CAES
+RES070: Renovación o sustitución de ventanas en edificios de viviendas,RES070,V1.1,Residencial,839,847,CAEs/BOE-A-2024-14816.pdf,CAES
+RES071: Renovación o sustitución de ventanas en edificios de viviendas (Canarias),RES071,V1.1,Residencial,847,855,CAEs/BOE-A-2024-14816.pdf,CAES
+RES080: Rehabilitación profunda de edificios de viviendas,RES080,V1.1,Residencial,855,861,CAEs/BOE-A-2024-14816.pdf,CAES
+RES090: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática A3 o A4,RES090,V1.1,Residencial,861,874,CAEs/BOE-A-2024-14816.pdf,CAES
+RES091: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática B3 o B4,RES091,V1.1,Residencial,874,886,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES092: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática C1, C2, C3 o C4",RES092,V1.1,Residencial,886,898,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES093: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática D1, D2 o D3",RES093,V1.1,Residencial,898,910,CAEs/BOE-A-2024-14816.pdf,CAES
+RES094: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática E1,RES094,V1.1,Residencial,910,922,CAEs/BOE-A-2024-14816.pdf,CAES
+RES095: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática A3 o A4,RES095,V1.1,Residencial,922,934,CAEs/BOE-A-2024-14816.pdf,CAES
+RES096: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática B3 o B4,RES096,V1.1,Residencial,934,946,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES097: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática C1, C2, C3 o C4",RES097,V1.1,Residencial,946,958,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES098: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática D1, D2 o D3",RES098,V1.1,Residencial,958,970,CAEs/BOE-A-2024-14816.pdf,CAES
+RES099: Hibridación en modo paralelo de caldera/s de combustión con bomba de calor de accionamiento eléctrico en edificios residenciales ubicados en la zona climática E1,RES099,V1.1,Residencial,970,982,CAEs/BOE-A-2024-14816.pdf,CAES
+RES210: Sustitución de calderas individuales/colectiva en edificio residencial por conexión a una red de calor,RES210,V1.1,Residencial,982,990,CAEs/BOE-A-2024-14816.pdf,CAES
+RES220: Sustitución de un sistema de ventilación existente (natural o mecánica) por un sistema de ventilación mecánica controlada de doble flujo con recuperación de calor,RES220,V1.1,Residencial,990,1002,CAEs/BOE-A-2024-14816.pdf,CAES
+RES230: Sustitución de sistema de ventilación existente (natural o mecánica) por un sistema de ventilación mecánica controlada de simple flujo higrorregulable,RES230,V1.1,Residencial,1002,1012,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES010S: Rehabilitación de la envolvente térmica de edificios de viviendas con superficie afectada mayor del 25%, para la lucha contra la pobreza energética",RES010S,V1.1,Residencial,1012,1018,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES011S: Rehabilitación de la envolvente térmica de edificios de vivienda con superficie afectada mayor del 25 % (Canarias), para la lucha contra la pobreza energética",RES011S,V1.1,Residencial,1018,1024,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES020S: Rehabilitación de la parte opaca de la envolvente térmica de edificios de viviendas con superficie afectada inferior o igual al 25 % de la envolvente térmica final, para la lucha contra la pobreza energética",RES020S,V1.1,Residencial,1024,1030,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES021S: Rehabilitación de la parte opaca de la envolvente térmica de edificios de viviendas con superficie afectada inferior o igual al 25 % de la envolvente térmica final (Canarias), para la lucha contra la pobreza energética",RES021S,V1.1,Residencial,1030,1036,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES030S: Nueva implantación, sustitución o ampliación de instalación térmica en un edificio y piscina con tecnología solar térmica, para la lucha contra la pobreza energética",RES030S,V1.1,Residencial,1036,1042,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES040S: Sistema de automatización y control para viviendas y edificios (BACS1), para la lucha contra la pobreza energética",RES040S,V1.1,Residencial,1042,1048,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES050S: Adquisición de frigoríficos de alta eficiencia, para la lucha contra la pobreza energética",RES050S,V1.1,Residencial,1048,1054,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES051S: Adquisición de frigorífico-congelador de alta eficiencia, para la lucha contra la pobreza energética",RES051S,V1.1,Residencial,1054,1060,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES052S: Adquisición de congelador de alta eficiencia, para la lucha contra la pobreza energética",RES052S,V1.1,Residencial,1060,1066,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES053S: Adquisición de lavadoras de alta eficiencia, para la lucha contra la pobreza energética",RES053S,V1.1,Residencial,1066,1072,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES054S: Adquisición de lavavajillas de alta eficiencia, para la lucha contra la pobreza energética",RES054S,V1.1,Residencial,1072,1078,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES060S: Sustitución de caldera combustible fósil por una bomba de calor tipo aire-aire o aire-agua, para la lucha contra la pobreza energética",RES060S,V1.1,Residencial,1078,1084,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES070S: Renovación o sustitución de ventanas en edificios de viviendas, para la lucha contra la pobreza energética",RES070S,V1.1,Residencial,1084,1090,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES071S: Renovación o sustitución de ventanas en edificios de viviendas (Canarias), para la lucha contra la pobreza energética",RES071S,V1.1,Residencial,1090,1096,CAEs/BOE-A-2024-14816.pdf,CAES
+"RES080S: Rehabilitación profunda de un edificio de viviendas, para la lucha contra la pobreza energética",RES080S,V1.1,Residencial,1096,1102,CAEs/BOE-A-2024-14816.pdf,CAES
+TRA010: Sustitución en vehículos a motor de sus neumáticos por otros de mayor eficiencia energética,TRA010,V1.1,Transporte,1102,1111,CAEs/BOE-A-2024-14816.pdf,CAES
+TRA020: Sistema de telemetría y geoposicionamiento en flota de transporte,TRA020,V1.1,Transporte,1111,1122,CAEs/BOE-A-2024-14816.pdf,CAES
+TRA030: Vehículo compartido en trayectos de largo recorrido,TRA030,V1.1,Transporte,1122,1132,CAEs/BOE-A-2024-14816.pdf,CAES
+TRA040: Movilidad colaborativa urbana y metropolitana,TRA040,V1.1,Transporte,1132,1142,CAEs/BOE-A-2024-14816.pdf,CAES
+TRA050: Sustitución de vehículo de combustión por un vehículo eléctrico puro,TRA050,V1.1,Transporte,1142,1146,CAEs/BOE-A-2024-14816.pdf,CAES
+SOL060: DECLARACIÓN RESPONSABLE relativa a la estimación de que el consumo anual de energía por parte del consumidor o consumidores asociados a la instalación sea igual o mayor al 80 % de la energía anual generada por la instalación,SOL060,,NG,6,8,Modelos de informe Real Decreto 477|2021/2022_02_08-Informe_80__Consumo_RD477.pdf,FV
+SOL070: INFORME JUSTIFICATIVO de la previsión de que el consumo anual de energía por parte del consumidor o consumidores asociados a la instalación sea igual o mayor al 80 % de la energía anual generada por la instalación objeto de la ayuda.,SOL070,,NG,8,9,Modelos de informe Real Decreto 477|2021/2022_02_08-Informe_80__Consumo_RD477.pdf,FV
